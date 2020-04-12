@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://lxb1226.github.io/"/>
+  <updated>2020-04-12T12:48:14.533Z</updated>
+  <id>http://lxb1226.github.io/</id>
+  
+  <author>
+    <name>heyjude</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>统计机器学习及监督学习概论</title>
+    <link href="http://lxb1226.github.io/2020/04/12/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+    <id>http://lxb1226.github.io/2020/04/12/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/</id>
+    <published>2020-04-11T16:00:00.000Z</published>
+    <updated>2020-04-12T12:48:14.533Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;第一章：统计学习及监督学习概论&quot;&gt;&lt;a href=&quot;#第一章：统计学习及监督学习概论&quot; class=&quot;headerlink&quot; title=&quot;第一章：统计学习及监督学习概论&quot;&gt;&lt;/a&gt;第一章：统计学习及监督学习概论&lt;/h1&gt;&lt;h2 id=&quot;1-1-统计学习&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="http://lxb1226.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="机器学习" scheme="http://lxb1226.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+</feed>
