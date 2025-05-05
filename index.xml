@@ -1,2 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heyjude's blog</title><link>http://localhost:1313/</link><description>Recent content on Heyjude's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 02 May 2025 09:23:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>First Post</title><link>http://localhost:1313/post/first-post/</link><pubDate>Fri, 02 May 2025 09:23:01 +0800</pubDate><guid>http://localhost:1313/post/first-post/</guid><description>&lt;h1 id="test">test&lt;/h1>
-&lt;h2 id="test-h2">test h2&lt;/h2></description></item><item><title>About</title><link>http://localhost:1313/about/</link><pubDate>Fri, 02 May 2025 09:16:27 +0800</pubDate><guid>http://localhost:1313/about/</guid><description>&lt;h1 id="about">About&lt;/h1></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heyjude's blog</title><link>http://localhost:1313/</link><description>Recent content on Heyjude's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 05 May 2025 20:28:24 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Blog With Hugo</title><link>http://localhost:1313/post/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>http://localhost:1313/post/how-to-create-blog-with-hugo/</guid><description>&lt;h1 id="hugo是什么">hugo是什么&lt;/h1>
+&lt;p>Hugo 是最受欢迎的开源静态网站生成器之一。用户可以使用 Hugo 来快速搭建自己的网站。&lt;/p>
+&lt;h1 id="搭建步骤">搭建步骤&lt;/h1>
+&lt;h2 id="1安装hugo">1.安装hugo&lt;/h2>
+&lt;p>在mac上面，可以使用以下命令来安装hugo:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">brew install hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="http://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png" alt="install">&lt;/p>
+&lt;p>安装完之后可以使用 &lt;code>hugo version&lt;/code> 来查看是否安装好:
+&lt;img src="http://img.music-poster.art/2025/05/9368e5db6f1f18f70eba3017c7144a9b.png" alt="hugo_version">&lt;/p></description></item><item><title>About</title><link>http://localhost:1313/about/</link><pubDate>Fri, 02 May 2025 09:16:27 +0800</pubDate><guid>http://localhost:1313/about/</guid><description>&lt;h1 id="about">About&lt;/h1></description></item></channel></rss>
