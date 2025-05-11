@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://localhost:1313/sitemap.xml
+Sitemap: https://lxb1226.github.io/sitemap.xml
