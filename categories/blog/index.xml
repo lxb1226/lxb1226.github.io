@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Heyjude's blog</title><link>https://lxb1226.github.io/categories/blog/</link><description>Recent content in Blog on Heyjude's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 05 May 2025 20:28:24 +0800</lastBuildDate><atom:link href="https://lxb1226.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>10分钟搭建属于自己的blog网站</title><link>https://lxb1226.github.io/post/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>https://lxb1226.github.io/post/how-to-create-blog-with-hugo/</guid><description>&lt;h1 id="hugo是什么">hugo是什么&lt;/h1>
-&lt;p>Hugo 是最受欢迎的开源静态网站生成器之一。用户可以使用 Hugo 来快速搭建自己的网站。&lt;/p>
-&lt;h1 id="搭建步骤">搭建步骤&lt;/h1>
-&lt;h2 id="1安装hugo">1.安装hugo&lt;/h2>
-&lt;p>在mac上面，可以使用以下命令来安装hugo:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">brew install hugo
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="http://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png" alt="install">&lt;/p>
-&lt;p>安装完之后可以使用 &lt;code>hugo version&lt;/code> 来查看是否安装好:
-&lt;img src="http://img.music-poster.art/2025/05/9368e5db6f1f18f70eba3017c7144a9b.png" alt="hugo_version">&lt;/p></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog - Category - Heyjude's Blog</title><link>/categories/blog/</link><description>Blog - Category - Heyjude's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>heyjude1817@gmail.com (heyjude)</managingEditor><webMaster>heyjude1817@gmail.com (heyjude)</webMaster><lastBuildDate>Mon, 05 May 2025 20:28:24 +0800</lastBuildDate><atom:link href="/categories/blog/" rel="self" type="application/rss+xml"/><item><title>10分钟搭建属于自己的blog网站</title><link>/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><author>heyjude</author><guid>/how-to-create-blog-with-hugo/</guid><description><![CDATA[<h1 id="hugo是什么">hugo是什么</h1>
+<p>Hugo 是最受欢迎的开源静态网站生成器之一。用户可以使用 Hugo 来快速搭建自己的网站。</p>
+<h1 id="搭建步骤">搭建步骤</h1>
+<h2 id="1安装hugo">1.安装hugo</h2>
+<p>在mac上面，可以使用以下命令来安装hugo:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install hugo</span></span></code></pre></div></div>
+<p></p>]]></description></item></channel></rss>
