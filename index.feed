@@ -2,22 +2,22 @@
     "version" : "https://jsonfeed.org/version/1.1",
     "title" : "Heyjude's Blog",
     "description": "Heyjude's Blog",
-    "home_page_url" : "/",
-    "feed_url" : "/index.feed",
-    "icon" : "/apple-touch-icon.png",
-    "favicon" : "/favicon.ico",
+    "home_page_url" : "http://heyjude.blog/",
+    "feed_url" : "http://heyjude.blog/index.feed",
+    "icon" : "http://heyjude.blog/apple-touch-icon.png",
+    "favicon" : "http://heyjude.blog/favicon.ico",
     "author" : {
         "name" : "Heyjude",
         "url": "https://github.com/lxb1226",
-        "avatar": "/logo/logo.jpg"
+        "avatar": "http://heyjude.blog/logo/logo.jpg"
     },
     "items" : [
     {
         "title" : "mac如何自动填充手机验证码",
         "date_published" : "2025-05-07T22:36:09+08:00",
         "date_modified" : "2025-05-07T22:36:09+08:00",
-        "id" : "/how-to-use-mess-auto/",
-        "url" : "/how-to-use-mess-auto/",
+        "id" : "http://heyjude.blog/how-to-use-mess-auto/",
+        "url" : "http://heyjude.blog/how-to-use-mess-auto/",
         "summary": " 缘由我们知道ios是支持自动填充短信验证码的，在mac上之后safari也是支持的，但是对于非safari浏览器来说，就不支持了。但是在国内平台上面，验证码又是一个逃不过的东西，因此我调研了一下，找到了目前的一些方案。\nAutoCode： 这是在app store上面一款免费的软件，支持ios和Andriod转发。 MessAuto： MessAuto 是一款 macOS 平台自动提取短信和邮箱验证码的软件，由 Rust 开发，适用于任何 App。 由于MessAuto是开源的，因此我这里选择了该款软件。\nMessAuto使用由于MessAuto是开源软件，并且作者也没有进行分发和签名，因此需要自己编译。\n1 1.编译 bash\n",
         "author" : {
           "name" : "heyjude"
@@ -29,8 +29,8 @@
         "title" : "10分钟搭建属于自己的blog网站",
         "date_published" : "2025-05-05T20:28:24+08:00",
         "date_modified" : "2025-05-05T20:28:24+08:00",
-        "id" : "/how-to-create-blog-with-hugo/",
-        "url" : "/how-to-create-blog-with-hugo/",
+        "id" : "http://heyjude.blog/how-to-create-blog-with-hugo/",
+        "url" : "http://heyjude.blog/how-to-create-blog-with-hugo/",
         "summary": " hugo是什么Hugo 是最受欢迎的开源静态网站生成器之一。用户可以使用 Hugo 来快速搭建自己的网站。\n搭建步骤 1 1.安装hugo在mac上面，可以使用以下命令来安装hugo:\nbash\n",
         "author" : {
           "name" : "heyjude"

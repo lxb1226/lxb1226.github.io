@@ -58,4 +58,4 @@ Disallow: /
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: http://heyjude.blog/sitemap.xml
