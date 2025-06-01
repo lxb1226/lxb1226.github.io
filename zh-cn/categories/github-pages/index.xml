@@ -1,15 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Github Pages - 分类 - Heyjude's Blog</title><link>http://heyjude.blog/zh-cn/categories/github-pages/</link><description>Github Pages - 分类 - Heyjude's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>heyjude1817@gmail.com (Heyjude)</managingEditor><webMaster>heyjude1817@gmail.com (Heyjude)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 May 2025 17:01:07 +0800</lastBuildDate><atom:link href="http://heyjude.blog/zh-cn/categories/github-pages/" rel="self" type="application/rss+xml"/><item><title>10分钟部署你的blog网站到github pages</title><link>http://heyjude.blog/zh-cn/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><author><name>Heyjude</name></author><guid>http://heyjude.blog/zh-cn/how-to-depoly-blog-to-github/</guid><description><![CDATA[<p>当我们在本地建立了我们的blog网站后，下一步就可以将blog内容分发到网络上，这样别人就可以看到了。</p>
-<p>我调研了一下目前的托管网站，有以下选择：</p>
-<ul>
-<li><strong>GitHub Pages</strong>：GitHub 提供的免费静态站点托管服务，适合与代码仓库集成。</li>
-<li><strong>Netlify</strong>：支持自动构建和部署，免费套餐功能丰富，Hugo 支持非常好。</li>
-<li><strong>Vercel</strong>：由 Next.js 团队开发，部署速度快，适合前端项目。</li>
-<li><strong>Cloudflare Pages</strong>：Cloudflare 提供的静态站点托管服务，自带 CDN 和安全加速。</li>
-<li><strong>Firebase Hosting</strong>：谷歌推出的前端托管平台，适合与前端应用配合使用。</li>
-<li><strong>Amazon S3 + CloudFront</strong>：高性能的托管和分发解决方案，适合专业部署。</li>
-<li><strong>GitLab Pages</strong>：GitLab 提供的静态站点托管服务，通过 CI 配置自动构建。</li>
-<li><strong>Render</strong>：简洁的全栈托管平台，支持自动部署 Hugo 网站。</li>
-<li><strong>Surge.sh</strong>：极简风格的静态站点托管工具，命令行部署简单快速。</li>
-<li><strong>DigitalOcean App Platform</strong>：云服务平台，支持自动部署静态网站和后端服务。</li>
-</ul>
-<p>这些平台各有特点，在后面的文章中我会一一介绍如何部署。在本篇文章中，我将介绍如何将blog网站部署到github page上。</p>]]></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Github Pages - 分类 - Heyjude's Blog</title><link>http://heyjude.blog/zh-cn/categories/github-pages/</link><description>Github Pages - 分类 - Heyjude's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>heyjude1817@gmail.com (Heyjude)</managingEditor><webMaster>heyjude1817@gmail.com (Heyjude)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 May 2025 17:01:07 +0800</lastBuildDate><atom:link href="http://heyjude.blog/zh-cn/categories/github-pages/" rel="self" type="application/rss+xml"/><item><title>10分钟部署你的blog网站到github pages</title><link>http://heyjude.blog/zh-cn/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><author><name>Heyjude</name></author><guid>http://heyjude.blog/zh-cn/how-to-depoly-blog-to-github/</guid><description>&lt;p>当我们在本地建立了我们的blog网站后，下一步就可以将blog内容分发到网络上，这样别人就可以看到了。&lt;/p></description></item></channel></rss>
