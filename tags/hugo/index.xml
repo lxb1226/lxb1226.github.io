@@ -1,8 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Hugo - Tag - Heyjude's Blog</title><link>http://heyjude.blog/tags/hugo/</link><description>Hugo - Tag - Heyjude's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>heyjude1817@gmail.com (Heyjude)</managingEditor><webMaster>heyjude1817@gmail.com (Heyjude)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 05 May 2025 20:28:24 +0800</lastBuildDate><atom:link href="http://heyjude.blog/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>10分钟搭建属于自己的blog网站</title><link>http://heyjude.blog/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><author><name>heyjude</name></author><guid>http://heyjude.blog/how-to-create-blog-with-hugo/</guid><description><![CDATA[<h1 id="hugo是什么" class="headerLink">
-    <a href="#hugo%e6%98%af%e4%bb%80%e4%b9%88" class="header-mark"></a>hugo是什么</h1><p>Hugo 是最受欢迎的开源静态网站生成器之一。用户可以使用 Hugo 来快速搭建自己的网站。</p>
-<h1 id="搭建步骤" class="headerLink">
-    <a href="#%e6%90%ad%e5%bb%ba%e6%ad%a5%e9%aa%a4" class="header-mark"></a>搭建步骤</h1><h2 id="1安装hugo" class="headerLink">
-    <a href="#1%e5%ae%89%e8%a3%85hugo" class="header-mark"></a>1 1.安装hugo</h2><p>在mac上面，可以使用以下命令来安装hugo:</p>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Hugo - Tag - Heyjude's Blog</title><link>http://heyjude.blog/tags/hugo/</link><description>Hugo - Tag - Heyjude's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>heyjude1817@gmail.com (Heyjude)</managingEditor><webMaster>heyjude1817@gmail.com (Heyjude)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 May 2025 17:01:07 +0800</lastBuildDate><atom:link href="http://heyjude.blog/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>Deploy Your Blog Website to GitHub Pages in 10 Minutes</title><link>http://heyjude.blog/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><author><name>Heyjude</name></author><guid>http://heyjude.blog/how-to-depoly-blog-to-github/</guid><description><![CDATA[<p>Once we have built our blog website locally, the next step is to distribute the blog content online so that others can see it.</p>
+<p>I researched the current hosting websites and found the following options:</p>
+<ul>
+<li><strong>GitHub Pages</strong>: A free static site hosting service provided by GitHub, suitable for integration with code repositories.</li>
+<li><strong>Netlify</strong>: Supports automatic building and deployment, rich features in free tier, with very good Hugo support.</li>
+<li><strong>Vercel</strong>: Developed by the Next.js team, fast deployment, suitable for frontend projects.</li>
+<li><strong>Cloudflare Pages</strong>: Static site hosting service provided by Cloudflare, comes with CDN and security acceleration.</li>
+<li><strong>Firebase Hosting</strong>: A frontend hosting platform launched by Google, suitable for use with frontend applications.</li>
+<li><strong>Amazon S3 + CloudFront</strong>: A high-performance hosting and distribution solution, suitable for professional deployments.</li>
+<li><strong>GitLab Pages</strong>: Static site hosting service provided by GitLab, automatically builds through CI configuration.</li>
+<li><strong>Render</strong>: A streamlined full-stack hosting platform, supports automatic deployment of Hugo sites.</li>
+<li><strong>Surge.sh</strong>: A minimalist static site hosting tool, simple and quick command line deployment.</li>
+<li><strong>DigitalOcean App Platform</strong>: Cloud service platform that supports automatic deployment of static websites and backend services.</li>
+</ul>
+<p>These platforms each have their own characteristics, and I will introduce how to deploy on each one in upcoming articles. In this article, I will introduce how to deploy a blog website to GitHub Pages.</p>]]></description></item><item><title>Build Your Own Blog Website in 10 Minutes</title><link>http://heyjude.blog/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><author><name>heyjude</name></author><guid>http://heyjude.blog/how-to-create-blog-with-hugo/</guid><description><![CDATA[<h2 id="what-is-hugo" class="headerLink">
+    <a href="#what-is-hugo" class="header-mark"></a>1 What is Hugo</h2><p>Hugo is one of the most popular open-source static site generators. Users can quickly build their own websites using Hugo.</p>
+<h2 id="setup-steps" class="headerLink">
+    <a href="#setup-steps" class="header-mark"></a>2 Setup Steps</h2><h3 id="install-hugo" class="headerLink">
+    <a href="#install-hugo" class="header-mark"></a>2.1 Install Hugo</h3><p>On a Mac, you can use the following command to install Hugo:</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
