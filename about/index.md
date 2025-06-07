@@ -1,7 +1,0 @@
-# About
-
-
-# About
-
-<!--more-->
-
