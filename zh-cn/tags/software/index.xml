@@ -202,7 +202,12 @@
  const collapseIcon = collapseBtn.querySelector('.collapse-icon');
  const collapseText = collapseBtn.querySelector('.collapse-text');
  const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
- const codeElement = codeContainer.querySelector('pre.chroma');
+
+ 
+ let codeElement = codeContainer.querySelector('pre.chroma');
+ if (!codeElement) {
+ codeElement = codeContainer.querySelector('pre');
+ }
 
  const defaultState = collapseBtn.dataset.defaultState || 'expanded';
  const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
@@ -214,8 +219,6 @@
 
  
  function initCollapse() {
- if (!codeElement) return;
-
  
  const shouldCollapse = isCollapsedAttr ||
  defaultState === 'collapsed' ||
@@ -227,16 +230,27 @@
  }
 
  function shouldAutoCollapse() {
- if (!codeElement) return false;
-
+ 
+ if (codeElement) {
  const lines = codeElement.querySelectorAll('.line, .cl');
  const height = codeElement.offsetHeight;
-
  return lines.length > autoCollapseLines || height > autoCollapseHeight;
  }
 
+ 
+ const containerHeight = codeContainer.offsetHeight;
+ if (containerHeight > autoCollapseHeight) {
+ return true;
+ }
+
+ 
+ const textContent = codeContainer.textContent || codeContainer.innerText || '';
+ const estimatedLines = textContent.split('\n').length;
+ return estimatedLines > autoCollapseLines;
+ }
+
  function setCollapsed(collapsed, animate = true) {
- if (!codeElement || !collapseOverlay) return;
+ if (!collapseOverlay) return;
 
  isCollapsed = collapsed;
 
@@ -306,7 +320,7 @@
  &lt;div
  class="inline-block overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-out hover:shadow-xl">
  &lt;img
- src="https:/img.music-poster.art/2025/05/c090074301dfda862dea2b0797bcdeec.png"
+ src="https://img.music-poster.art/2025/05/c090074301dfda862dea2b0797bcdeec.png"
  alt=""
  
  class="h-auto w-full max-w-full transition-transform duration-300 ease-out hover:scale-105"
