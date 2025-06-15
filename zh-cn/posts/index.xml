@@ -663,22 +663,19 @@ yourusername.github.io/
 })();
 &lt;/script>
 &lt;p>当编译好之后，会在当前目录下的&lt;code>target/release/bundle/osx/MessAuto.app&lt;/code>构建包。
-&lt;div class="not-prose my-8">
+
+&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+ &lt;div class="image-container">
  
- &lt;figure class="text-center">
- &lt;div
- class="inline-block overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-out hover:shadow-xl">
  &lt;img
  src="https://img.music-poster.art/2025/05/c090074301dfda862dea2b0797bcdeec.png"
  alt=""
  
- class="h-auto w-full max-w-full transition-transform duration-300 ease-out hover:scale-105"
+ 
  loading="lazy"
- decoding="async" />
- &lt;/div>
+ decoding="async" />&lt;/div>
 
- &lt;/figure>&lt;/div>
-&lt;/p></description></item><item><title>10分钟搭建属于自己的blog网站</title><link>http://heyjude.blog/zh-cn/posts/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>http://heyjude.blog/zh-cn/posts/how-to-create-blog-with-hugo/</guid><description>&lt;h2 id="hugo是什么">hugo是什么&lt;/h2>
+ &lt;/figure>&lt;/p></description></item><item><title>10分钟搭建属于自己的blog网站</title><link>http://heyjude.blog/zh-cn/posts/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>http://heyjude.blog/zh-cn/posts/how-to-create-blog-with-hugo/</guid><description>&lt;h2 id="hugo是什么">hugo是什么&lt;/h2>
 &lt;p>Hugo 是最受欢迎的开源静态网站生成器之一。用户可以使用 Hugo 来快速搭建自己的网站。&lt;/p>
 &lt;h2 id="搭建步骤">搭建步骤&lt;/h2>
 &lt;h3 id="安装hugo">安装hugo&lt;/h3>
@@ -981,19 +978,16 @@ yourusername.github.io/
  }
 })();
 &lt;/script>
-&lt;p>&lt;div class="not-prose my-8">
+&lt;p>
+&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+ &lt;div class="image-container">
  
- &lt;figure class="text-center">
- &lt;div
- class="inline-block overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-out hover:shadow-xl">
  &lt;img
  src="https://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png"
  alt="install"
  
- class="h-auto w-full max-w-full transition-transform duration-300 ease-out hover:scale-105"
+ 
  loading="lazy"
- decoding="async" />
- &lt;/div>
+ decoding="async" />&lt;/div>
 
- &lt;/figure>&lt;/div>
-&lt;/p></description></item></channel></rss>
+ &lt;/figure>&lt;/p></description></item></channel></rss>

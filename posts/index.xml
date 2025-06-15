@@ -321,19 +321,16 @@
  }
 })();
 &lt;/script>
-&lt;p>&lt;div class="not-prose my-8">
+&lt;p>
+&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+ &lt;div class="image-container">
  
- &lt;figure class="text-center">
- &lt;div
- class="inline-block overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-out hover:shadow-xl">
  &lt;img
  src="https://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png"
  alt="install"
  
- class="h-auto w-full max-w-full transition-transform duration-300 ease-out hover:scale-105"
+ 
  loading="lazy"
- decoding="async" />
- &lt;/div>
+ decoding="async" />&lt;/div>
 
- &lt;/figure>&lt;/div>
-&lt;/p></description></item></channel></rss>
+ &lt;/figure>&lt;/p></description></item></channel></rss>
