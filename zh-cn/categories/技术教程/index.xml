@@ -1,4 +1,1528 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技术教程 on Heyjude's Blog</title><link>https://heyjude.blog/zh-cn/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/</link><description>Recent content in 技术教程 on Heyjude's Blog</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://heyjude.blog/zh-cn/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Vercel 上部署 Umami 轻松实现网站流量统计</title><link>https://heyjude.blog/zh-cn/posts/how-to-depoly-umami-with-vercel/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/zh-cn/posts/how-to-depoly-umami-with-vercel/</guid><description>&lt;p>Umami 是一个简单、快速、注重隐私的开源网站统计工具，是 Google Analytics 的理想替代品。本文将指导你如何在 Vercel 上部署 Umami，并通过 Vercel Storage 创建 Neon PostgreSQL 数据库，搭建一个零成本、轻量级的网站流量统计系统。本教程特别为 Hugo 静态网站用户优化，确保生成的 Markdown 文件适配 Hugo 的静态网页生成。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技术教程 on Heyjude's Blog</title><link>https://heyjude.blog/zh-cn/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/</link><description>Recent content in 技术教程 on Heyjude's Blog</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 16 Jun 2025 20:29:00 +0800</lastBuildDate><atom:link href="https://heyjude.blog/zh-cn/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Hugo 构建博客并部署到 Cloudflare Pages</title><link>https://heyjude.blog/zh-cn/posts/deploy-hugo-to-cloudflare/</link><pubDate>Mon, 16 Jun 2025 20:29:00 +0800</pubDate><guid>https://heyjude.blog/zh-cn/posts/deploy-hugo-to-cloudflare/</guid><description>&lt;h1 id="使用-hugo-构建博客并部署到-cloudflare-pages">使用 Hugo 构建博客并部署到 Cloudflare Pages&lt;/h1>
+&lt;p>在这篇文章中，我将带你一步步完成使用 &lt;a href="https://gohugo.io/">Hugo&lt;/a> 构建一个个人博客，并将其部署到 &lt;a href="https://pages.cloudflare.com/">Cloudflare Pages&lt;/a> 的完整过程。Hugo 是一个快速、灵活的静态网站生成器，而 Cloudflare Pages 提供免费的静态网站托管服务，结合全球 CDN 加速，能够让你的博客快速上线并拥有良好的访问体验。无论你是技术新手还是有一定经验的开发者，这篇教程都将帮助你快速搭建一个属于自己的博客。&lt;/p>
+&lt;h2 id="为什么选择-hugo-和-cloudflare-pages">为什么选择 Hugo 和 Cloudflare Pages？&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Hugo&lt;/strong>：以 Go 语言编写，生成速度极快，支持丰富的主题和 Markdown 格式，适合博客和文档网站。&lt;/li>
+&lt;li>&lt;strong>Cloudflare Pages&lt;/strong>：提供无缝的 GitHub 集成、自动部署、免费 SSL 证书和全球 CDN 加速，国内访问速度优于 GitHub Pages。&lt;/li>
+&lt;li>&lt;strong>成本&lt;/strong>：两者结合完全免费，适合个人博客或小型项目。&lt;/li>
+&lt;/ul>
+&lt;h2 id="准备工作">准备工作&lt;/h2>
+&lt;p>在开始之前，你需要准备以下工具和账户：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Hugo&lt;/strong>：安装最新版本的 Hugo（建议使用扩展版本以支持更多功能）。&lt;/li>
+&lt;li>&lt;strong>Git&lt;/strong>：用于版本管理和将代码推送到 GitHub。&lt;/li>
+&lt;li>&lt;strong>GitHub 账户&lt;/strong>：用于存储博客源代码。&lt;/li>
+&lt;li>&lt;strong>Cloudflare 账户&lt;/strong>：用于部署和托管博客。&lt;/li>
+&lt;li>&lt;strong>文本编辑器&lt;/strong>：如 VSCode，用于编辑 Markdown 文件和配置文件。&lt;/li>
+&lt;/ol>
+&lt;h2 id="步骤一安装-hugo">步骤一：安装 Hugo&lt;/h2>
+&lt;h3 id="windows">Windows&lt;/h3>
+&lt;ol>
+&lt;li>安装 Chocolatey 包管理器（如果尚未安装）：
+&lt;div
+ class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+ 
+ &lt;div
+ class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;div class="text-muted-foreground flex-shrink-0">
+ 
+ &lt;svg class="h-4 w-4"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+&lt;/svg>
+ &lt;/div>
+ &lt;span class="text-muted-foreground text-sm font-medium">
+ POWERSHELL
+ &lt;/span>
+ &lt;/div>
+
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;button
+ class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-0"
+ data-default-state="expanded"
+ data-collapsed="false"
+ data-auto-collapse-lines="30"
+ data-auto-collapse-height="400"
+ data-collapsed-height="120"
+ title="折叠"
+ aria-label="折叠">
+ &lt;span class="collapse-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/>&lt;/svg>
+ &lt;/span>
+ &lt;span class="collapse-text hidden sm:inline"
+ >折叠&lt;/span
+ >
+ &lt;/button>
+ &lt;button
+ class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-0"
+ title="复制"
+ aria-label="复制">
+ &lt;span class="copy-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+&lt;/svg>
+ &lt;/span>
+ &lt;span class="copy-text hidden sm:inline"
+ >复制&lt;/span
+ >
+ &lt;/button>
+ &lt;/div>
+ &lt;/div>
+
+ 
+ &lt;div class="code-block-content relative" id="code-0">
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-ExecutionPolicy&lt;/span> &lt;span class="n">Bypass&lt;/span> &lt;span class="n">-Scope&lt;/span> &lt;span class="k">Process&lt;/span> &lt;span class="n">-Force&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="no">System.Net.ServicePointManager&lt;/span>&lt;span class="p">]::&lt;/span>&lt;span class="n">SecurityProtocol&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="no">System.Net.ServicePointManager&lt;/span>&lt;span class="p">]::&lt;/span>&lt;span class="n">SecurityProtocol&lt;/span> &lt;span class="o">-bor&lt;/span> &lt;span class="mf">3072&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nb">iex &lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nb">New-Object&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Net&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">WebClient&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="py">DownloadString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://chocolatey.org/install.ps1&amp;#39;&lt;/span>&lt;span class="p">))&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ 
+ &lt;div
+ class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+ &lt;div
+ class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+ 点击展开查看更多
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;/div>
+
+
+&lt;script>
+(function() {
+ const codeId = 'code-0';
+ const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+ const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+ const codeContainer = document.getElementById(codeId);
+
+ if (!codeContainer) return;
+
+ 
+ if (copyBtn) {
+ const copyIcon = copyBtn.querySelector('.copy-icon');
+ const copyText = copyBtn.querySelector('.copy-text');
+
+ copyBtn.addEventListener('click', async function() {
+ try {
+ 
+ let codeText = '';
+
+ 
+ const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+ if (codeTableCell) {
+ codeText = codeTableCell.textContent || codeTableCell.innerText;
+ } else {
+ 
+ const codeElement = codeContainer.querySelector('code');
+ if (codeElement) {
+ 
+ const hasInlineLineNumbers = codeElement.querySelector('.ln');
+ if (hasInlineLineNumbers) {
+ 
+ const codeLines = codeElement.querySelectorAll('.cl');
+ if (codeLines.length > 0) {
+ codeText = Array.from(codeLines)
+ .map(line => {
+ const text = line.textContent || line.innerText;
+ 
+ return text.replace(/\n+$/, '');
+ })
+ .join('\n')
+ .replace(/\n+$/, ''); 
+ } else {
+ 
+ const allText = codeElement.textContent || codeElement.innerText;
+ codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+ }
+ } else {
+ 
+ codeText = codeElement.textContent || codeElement.innerText;
+ }
+ } else {
+ 
+ codeText = codeContainer.textContent || codeContainer.innerText;
+ }
+ }
+
+ 
+ codeText = codeText.trim();
+
+ 
+ await navigator.clipboard.writeText(codeText);
+
+ 
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = '已复制';
+ }
+ copyBtn.classList.add('text-green-600');
+
+ 
+ setTimeout(() => {
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = '复制';
+ }
+ copyBtn.classList.remove('text-green-600');
+ }, 2000);
+
+ } catch (err) {
+ console.error('复制失败:', err);
+
+ 
+ const range = document.createRange();
+ const codeElement = codeContainer.querySelector('code') || codeContainer;
+ range.selectNodeContents(codeElement);
+ const selection = window.getSelection();
+ selection.removeAllRanges();
+ selection.addRange(range);
+
+ 
+ if (copyText) {
+ copyText.textContent = '已选择';
+ }
+
+ setTimeout(() => {
+ if (copyText) {
+ copyText.textContent = '复制';
+ }
+ selection.removeAllRanges();
+ }, 2000);
+ }
+ });
+ }
+
+ 
+ if (collapseBtn) {
+ const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+ const collapseText = collapseBtn.querySelector('.collapse-text');
+ const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+ 
+ let codeElement = codeContainer.querySelector('pre.chroma');
+ if (!codeElement) {
+ codeElement = codeContainer.querySelector('pre');
+ }
+
+ const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+ const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+ const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+ const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+ const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+ let isCollapsed = false;
+
+ 
+ function initCollapse() {
+ 
+ const shouldCollapse = isCollapsedAttr ||
+ defaultState === 'collapsed' ||
+ shouldAutoCollapse();
+
+ if (shouldCollapse) {
+ setCollapsed(true, false); 
+ }
+ }
+
+ function shouldAutoCollapse() {
+ 
+ if (codeElement) {
+ const lines = codeElement.querySelectorAll('.line, .cl');
+ const height = codeElement.offsetHeight;
+ return lines.length > autoCollapseLines || height > autoCollapseHeight;
+ }
+
+ 
+ const containerHeight = codeContainer.offsetHeight;
+ if (containerHeight > autoCollapseHeight) {
+ return true;
+ }
+
+ 
+ const textContent = codeContainer.textContent || codeContainer.innerText || '';
+ const estimatedLines = textContent.split('\n').length;
+ return estimatedLines > autoCollapseLines;
+ }
+
+ function setCollapsed(collapsed, animate = true) {
+ if (!collapseOverlay) return;
+
+ isCollapsed = collapsed;
+
+ if (collapsed) {
+ 
+ codeContainer.style.maxHeight = collapsedHeight + 'px';
+ codeContainer.style.overflow = 'hidden';
+ collapseOverlay.style.opacity = '1';
+ collapseOverlay.style.pointerEvents = 'auto';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = '展开';
+ }
+ collapseBtn.title = '展开';
+
+ } else {
+ 
+ codeContainer.style.maxHeight = '';
+ codeContainer.style.overflow = '';
+ collapseOverlay.style.opacity = '0';
+ collapseOverlay.style.pointerEvents = 'none';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = '折叠';
+ }
+ collapseBtn.title = '折叠';
+ }
+
+ 
+ if (animate) {
+ codeContainer.style.transition = 'max-height 0.3s ease-out';
+ setTimeout(() => {
+ codeContainer.style.transition = '';
+ }, 300);
+ }
+ }
+
+ function toggleCollapse() {
+ setCollapsed(!isCollapsed, true);
+ }
+
+ 
+ collapseBtn.addEventListener('click', toggleCollapse);
+
+ 
+ if (collapseOverlay) {
+ collapseOverlay.addEventListener('click', () => {
+ if (isCollapsed) {
+ setCollapsed(false, true);
+ }
+ });
+ }
+
+ 
+ initCollapse();
+ }
+})();
+&lt;/script>
+&lt;/li>
+&lt;li>使用 Chocolatey 安装 Hugo 扩展版本：
+&lt;div
+ class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+ 
+ &lt;div
+ class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;div class="text-muted-foreground flex-shrink-0">
+ 
+ &lt;svg class="h-4 w-4"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+&lt;/svg>
+ &lt;/div>
+ &lt;span class="text-muted-foreground text-sm font-medium">
+ POWERSHELL
+ &lt;/span>
+ &lt;/div>
+
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;button
+ class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-1"
+ data-default-state="expanded"
+ data-collapsed="false"
+ data-auto-collapse-lines="30"
+ data-auto-collapse-height="400"
+ data-collapsed-height="120"
+ title="折叠"
+ aria-label="折叠">
+ &lt;span class="collapse-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/>&lt;/svg>
+ &lt;/span>
+ &lt;span class="collapse-text hidden sm:inline"
+ >折叠&lt;/span
+ >
+ &lt;/button>
+ &lt;button
+ class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-1"
+ title="复制"
+ aria-label="复制">
+ &lt;span class="copy-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+&lt;/svg>
+ &lt;/span>
+ &lt;span class="copy-text hidden sm:inline"
+ >复制&lt;/span
+ >
+ &lt;/button>
+ &lt;/div>
+ &lt;/div>
+
+ 
+ &lt;div class="code-block-content relative" id="code-1">
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">choco&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="nb">hugo-extended&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ 
+ &lt;div
+ class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+ &lt;div
+ class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+ 点击展开查看更多
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;/div>
+
+
+&lt;script>
+(function() {
+ const codeId = 'code-1';
+ const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+ const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+ const codeContainer = document.getElementById(codeId);
+
+ if (!codeContainer) return;
+
+ 
+ if (copyBtn) {
+ const copyIcon = copyBtn.querySelector('.copy-icon');
+ const copyText = copyBtn.querySelector('.copy-text');
+
+ copyBtn.addEventListener('click', async function() {
+ try {
+ 
+ let codeText = '';
+
+ 
+ const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+ if (codeTableCell) {
+ codeText = codeTableCell.textContent || codeTableCell.innerText;
+ } else {
+ 
+ const codeElement = codeContainer.querySelector('code');
+ if (codeElement) {
+ 
+ const hasInlineLineNumbers = codeElement.querySelector('.ln');
+ if (hasInlineLineNumbers) {
+ 
+ const codeLines = codeElement.querySelectorAll('.cl');
+ if (codeLines.length > 0) {
+ codeText = Array.from(codeLines)
+ .map(line => {
+ const text = line.textContent || line.innerText;
+ 
+ return text.replace(/\n+$/, '');
+ })
+ .join('\n')
+ .replace(/\n+$/, ''); 
+ } else {
+ 
+ const allText = codeElement.textContent || codeElement.innerText;
+ codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+ }
+ } else {
+ 
+ codeText = codeElement.textContent || codeElement.innerText;
+ }
+ } else {
+ 
+ codeText = codeContainer.textContent || codeContainer.innerText;
+ }
+ }
+
+ 
+ codeText = codeText.trim();
+
+ 
+ await navigator.clipboard.writeText(codeText);
+
+ 
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = '已复制';
+ }
+ copyBtn.classList.add('text-green-600');
+
+ 
+ setTimeout(() => {
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = '复制';
+ }
+ copyBtn.classList.remove('text-green-600');
+ }, 2000);
+
+ } catch (err) {
+ console.error('复制失败:', err);
+
+ 
+ const range = document.createRange();
+ const codeElement = codeContainer.querySelector('code') || codeContainer;
+ range.selectNodeContents(codeElement);
+ const selection = window.getSelection();
+ selection.removeAllRanges();
+ selection.addRange(range);
+
+ 
+ if (copyText) {
+ copyText.textContent = '已选择';
+ }
+
+ setTimeout(() => {
+ if (copyText) {
+ copyText.textContent = '复制';
+ }
+ selection.removeAllRanges();
+ }, 2000);
+ }
+ });
+ }
+
+ 
+ if (collapseBtn) {
+ const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+ const collapseText = collapseBtn.querySelector('.collapse-text');
+ const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+ 
+ let codeElement = codeContainer.querySelector('pre.chroma');
+ if (!codeElement) {
+ codeElement = codeContainer.querySelector('pre');
+ }
+
+ const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+ const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+ const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+ const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+ const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+ let isCollapsed = false;
+
+ 
+ function initCollapse() {
+ 
+ const shouldCollapse = isCollapsedAttr ||
+ defaultState === 'collapsed' ||
+ shouldAutoCollapse();
+
+ if (shouldCollapse) {
+ setCollapsed(true, false); 
+ }
+ }
+
+ function shouldAutoCollapse() {
+ 
+ if (codeElement) {
+ const lines = codeElement.querySelectorAll('.line, .cl');
+ const height = codeElement.offsetHeight;
+ return lines.length > autoCollapseLines || height > autoCollapseHeight;
+ }
+
+ 
+ const containerHeight = codeContainer.offsetHeight;
+ if (containerHeight > autoCollapseHeight) {
+ return true;
+ }
+
+ 
+ const textContent = codeContainer.textContent || codeContainer.innerText || '';
+ const estimatedLines = textContent.split('\n').length;
+ return estimatedLines > autoCollapseLines;
+ }
+
+ function setCollapsed(collapsed, animate = true) {
+ if (!collapseOverlay) return;
+
+ isCollapsed = collapsed;
+
+ if (collapsed) {
+ 
+ codeContainer.style.maxHeight = collapsedHeight + 'px';
+ codeContainer.style.overflow = 'hidden';
+ collapseOverlay.style.opacity = '1';
+ collapseOverlay.style.pointerEvents = 'auto';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = '展开';
+ }
+ collapseBtn.title = '展开';
+
+ } else {
+ 
+ codeContainer.style.maxHeight = '';
+ codeContainer.style.overflow = '';
+ collapseOverlay.style.opacity = '0';
+ collapseOverlay.style.pointerEvents = 'none';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = '折叠';
+ }
+ collapseBtn.title = '折叠';
+ }
+
+ 
+ if (animate) {
+ codeContainer.style.transition = 'max-height 0.3s ease-out';
+ setTimeout(() => {
+ codeContainer.style.transition = '';
+ }, 300);
+ }
+ }
+
+ function toggleCollapse() {
+ setCollapsed(!isCollapsed, true);
+ }
+
+ 
+ collapseBtn.addEventListener('click', toggleCollapse);
+
+ 
+ if (collapseOverlay) {
+ collapseOverlay.addEventListener('click', () => {
+ if (isCollapsed) {
+ setCollapsed(false, true);
+ }
+ });
+ }
+
+ 
+ initCollapse();
+ }
+})();
+&lt;/script>
+&lt;/li>
+&lt;li>验证安装：
+&lt;div
+ class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+ 
+ &lt;div
+ class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;div class="text-muted-foreground flex-shrink-0">
+ 
+ &lt;svg class="h-4 w-4"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+&lt;/svg>
+ &lt;/div>
+ &lt;span class="text-muted-foreground text-sm font-medium">
+ POWERSHELL
+ &lt;/span>
+ &lt;/div>
+
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;button
+ class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-2"
+ data-default-state="expanded"
+ data-collapsed="false"
+ data-auto-collapse-lines="30"
+ data-auto-collapse-height="400"
+ data-collapsed-height="120"
+ title="折叠"
+ aria-label="折叠">
+ &lt;span class="collapse-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/>&lt;/svg>
+ &lt;/span>
+ &lt;span class="collapse-text hidden sm:inline"
+ >折叠&lt;/span
+ >
+ &lt;/button>
+ &lt;button
+ class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-2"
+ title="复制"
+ aria-label="复制">
+ &lt;span class="copy-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+&lt;/svg>
+ &lt;/span>
+ &lt;span class="copy-text hidden sm:inline"
+ >复制&lt;/span
+ >
+ &lt;/button>
+ &lt;/div>
+ &lt;/div>
+
+ 
+ &lt;div class="code-block-content relative" id="code-2">
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">hugo&lt;/span> &lt;span class="n">version&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ 
+ &lt;div
+ class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+ &lt;div
+ class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+ 点击展开查看更多
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;/div>
+
+
+&lt;script>
+(function() {
+ const codeId = 'code-2';
+ const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+ const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+ const codeContainer = document.getElementById(codeId);
+
+ if (!codeContainer) return;
+
+ 
+ if (copyBtn) {
+ const copyIcon = copyBtn.querySelector('.copy-icon');
+ const copyText = copyBtn.querySelector('.copy-text');
+
+ copyBtn.addEventListener('click', async function() {
+ try {
+ 
+ let codeText = '';
+
+ 
+ const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+ if (codeTableCell) {
+ codeText = codeTableCell.textContent || codeTableCell.innerText;
+ } else {
+ 
+ const codeElement = codeContainer.querySelector('code');
+ if (codeElement) {
+ 
+ const hasInlineLineNumbers = codeElement.querySelector('.ln');
+ if (hasInlineLineNumbers) {
+ 
+ const codeLines = codeElement.querySelectorAll('.cl');
+ if (codeLines.length > 0) {
+ codeText = Array.from(codeLines)
+ .map(line => {
+ const text = line.textContent || line.innerText;
+ 
+ return text.replace(/\n+$/, '');
+ })
+ .join('\n')
+ .replace(/\n+$/, ''); 
+ } else {
+ 
+ const allText = codeElement.textContent || codeElement.innerText;
+ codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+ }
+ } else {
+ 
+ codeText = codeElement.textContent || codeElement.innerText;
+ }
+ } else {
+ 
+ codeText = codeContainer.textContent || codeContainer.innerText;
+ }
+ }
+
+ 
+ codeText = codeText.trim();
+
+ 
+ await navigator.clipboard.writeText(codeText);
+
+ 
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = '已复制';
+ }
+ copyBtn.classList.add('text-green-600');
+
+ 
+ setTimeout(() => {
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = '复制';
+ }
+ copyBtn.classList.remove('text-green-600');
+ }, 2000);
+
+ } catch (err) {
+ console.error('复制失败:', err);
+
+ 
+ const range = document.createRange();
+ const codeElement = codeContainer.querySelector('code') || codeContainer;
+ range.selectNodeContents(codeElement);
+ const selection = window.getSelection();
+ selection.removeAllRanges();
+ selection.addRange(range);
+
+ 
+ if (copyText) {
+ copyText.textContent = '已选择';
+ }
+
+ setTimeout(() => {
+ if (copyText) {
+ copyText.textContent = '复制';
+ }
+ selection.removeAllRanges();
+ }, 2000);
+ }
+ });
+ }
+
+ 
+ if (collapseBtn) {
+ const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+ const collapseText = collapseBtn.querySelector('.collapse-text');
+ const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+ 
+ let codeElement = codeContainer.querySelector('pre.chroma');
+ if (!codeElement) {
+ codeElement = codeContainer.querySelector('pre');
+ }
+
+ const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+ const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+ const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+ const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+ const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+ let isCollapsed = false;
+
+ 
+ function initCollapse() {
+ 
+ const shouldCollapse = isCollapsedAttr ||
+ defaultState === 'collapsed' ||
+ shouldAutoCollapse();
+
+ if (shouldCollapse) {
+ setCollapsed(true, false); 
+ }
+ }
+
+ function shouldAutoCollapse() {
+ 
+ if (codeElement) {
+ const lines = codeElement.querySelectorAll('.line, .cl');
+ const height = codeElement.offsetHeight;
+ return lines.length > autoCollapseLines || height > autoCollapseHeight;
+ }
+
+ 
+ const containerHeight = codeContainer.offsetHeight;
+ if (containerHeight > autoCollapseHeight) {
+ return true;
+ }
+
+ 
+ const textContent = codeContainer.textContent || codeContainer.innerText || '';
+ const estimatedLines = textContent.split('\n').length;
+ return estimatedLines > autoCollapseLines;
+ }
+
+ function setCollapsed(collapsed, animate = true) {
+ if (!collapseOverlay) return;
+
+ isCollapsed = collapsed;
+
+ if (collapsed) {
+ 
+ codeContainer.style.maxHeight = collapsedHeight + 'px';
+ codeContainer.style.overflow = 'hidden';
+ collapseOverlay.style.opacity = '1';
+ collapseOverlay.style.pointerEvents = 'auto';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = '展开';
+ }
+ collapseBtn.title = '展开';
+
+ } else {
+ 
+ codeContainer.style.maxHeight = '';
+ codeContainer.style.overflow = '';
+ collapseOverlay.style.opacity = '0';
+ collapseOverlay.style.pointerEvents = 'none';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = '折叠';
+ }
+ collapseBtn.title = '折叠';
+ }
+
+ 
+ if (animate) {
+ codeContainer.style.transition = 'max-height 0.3s ease-out';
+ setTimeout(() => {
+ codeContainer.style.transition = '';
+ }, 300);
+ }
+ }
+
+ function toggleCollapse() {
+ setCollapsed(!isCollapsed, true);
+ }
+
+ 
+ collapseBtn.addEventListener('click', toggleCollapse);
+
+ 
+ if (collapseOverlay) {
+ collapseOverlay.addEventListener('click', () => {
+ if (isCollapsed) {
+ setCollapsed(false, true);
+ }
+ });
+ }
+
+ 
+ initCollapse();
+ }
+})();
+&lt;/script>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="macos">macOS&lt;/h3>
+&lt;ol>
+&lt;li>使用 Homebrew 安装：
+&lt;div
+ class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+ 
+ &lt;div
+ class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;div class="text-muted-foreground flex-shrink-0">
+ 
+ &lt;svg class="h-4 w-4"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+&lt;/svg>
+ &lt;/div>
+ &lt;span class="text-muted-foreground text-sm font-medium">
+ BASH
+ &lt;/span>
+ &lt;/div>
+
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;button
+ class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-3"
+ data-default-state="expanded"
+ data-collapsed="false"
+ data-auto-collapse-lines="30"
+ data-auto-collapse-height="400"
+ data-collapsed-height="120"
+ title="折叠"
+ aria-label="折叠">
+ &lt;span class="collapse-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/>&lt;/svg>
+ &lt;/span>
+ &lt;span class="collapse-text hidden sm:inline"
+ >折叠&lt;/span
+ >
+ &lt;/button>
+ &lt;button
+ class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-3"
+ title="复制"
+ aria-label="复制">
+ &lt;span class="copy-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+&lt;/svg>
+ &lt;/span>
+ &lt;span class="copy-text hidden sm:inline"
+ >复制&lt;/span
+ >
+ &lt;/button>
+ &lt;/div>
+ &lt;/div>
+
+ 
+ &lt;div class="code-block-content relative" id="code-3">
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">brew install hugo&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ 
+ &lt;div
+ class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+ &lt;div
+ class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+ 点击展开查看更多
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;/div>
+
+
+&lt;script>
+(function() {
+ const codeId = 'code-3';
+ const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+ const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+ const codeContainer = document.getElementById(codeId);
+
+ if (!codeContainer) return;
+
+ 
+ if (copyBtn) {
+ const copyIcon = copyBtn.querySelector('.copy-icon');
+ const copyText = copyBtn.querySelector('.copy-text');
+
+ copyBtn.addEventListener('click', async function() {
+ try {
+ 
+ let codeText = '';
+
+ 
+ const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+ if (codeTableCell) {
+ codeText = codeTableCell.textContent || codeTableCell.innerText;
+ } else {
+ 
+ const codeElement = codeContainer.querySelector('code');
+ if (codeElement) {
+ 
+ const hasInlineLineNumbers = codeElement.querySelector('.ln');
+ if (hasInlineLineNumbers) {
+ 
+ const codeLines = codeElement.querySelectorAll('.cl');
+ if (codeLines.length > 0) {
+ codeText = Array.from(codeLines)
+ .map(line => {
+ const text = line.textContent || line.innerText;
+ 
+ return text.replace(/\n+$/, '');
+ })
+ .join('\n')
+ .replace(/\n+$/, ''); 
+ } else {
+ 
+ const allText = codeElement.textContent || codeElement.innerText;
+ codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+ }
+ } else {
+ 
+ codeText = codeElement.textContent || codeElement.innerText;
+ }
+ } else {
+ 
+ codeText = codeContainer.textContent || codeContainer.innerText;
+ }
+ }
+
+ 
+ codeText = codeText.trim();
+
+ 
+ await navigator.clipboard.writeText(codeText);
+
+ 
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = '已复制';
+ }
+ copyBtn.classList.add('text-green-600');
+
+ 
+ setTimeout(() => {
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = '复制';
+ }
+ copyBtn.classList.remove('text-green-600');
+ }, 2000);
+
+ } catch (err) {
+ console.error('复制失败:', err);
+
+ 
+ const range = document.createRange();
+ const codeElement = codeContainer.querySelector('code') || codeContainer;
+ range.selectNodeContents(codeElement);
+ const selection = window.getSelection();
+ selection.removeAllRanges();
+ selection.addRange(range);
+
+ 
+ if (copyText) {
+ copyText.textContent = '已选择';
+ }
+
+ setTimeout(() => {
+ if (copyText) {
+ copyText.textContent = '复制';
+ }
+ selection.removeAllRanges();
+ }, 2000);
+ }
+ });
+ }
+
+ 
+ if (collapseBtn) {
+ const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+ const collapseText = collapseBtn.querySelector('.collapse-text');
+ const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+ 
+ let codeElement = codeContainer.querySelector('pre.chroma');
+ if (!codeElement) {
+ codeElement = codeContainer.querySelector('pre');
+ }
+
+ const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+ const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+ const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+ const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+ const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+ let isCollapsed = false;
+
+ 
+ function initCollapse() {
+ 
+ const shouldCollapse = isCollapsedAttr ||
+ defaultState === 'collapsed' ||
+ shouldAutoCollapse();
+
+ if (shouldCollapse) {
+ setCollapsed(true, false); 
+ }
+ }
+
+ function shouldAutoCollapse() {
+ 
+ if (codeElement) {
+ const lines = codeElement.querySelectorAll('.line, .cl');
+ const height = codeElement.offsetHeight;
+ return lines.length > autoCollapseLines || height > autoCollapseHeight;
+ }
+
+ 
+ const containerHeight = codeContainer.offsetHeight;
+ if (containerHeight > autoCollapseHeight) {
+ return true;
+ }
+
+ 
+ const textContent = codeContainer.textContent || codeContainer.innerText || '';
+ const estimatedLines = textContent.split('\n').length;
+ return estimatedLines > autoCollapseLines;
+ }
+
+ function setCollapsed(collapsed, animate = true) {
+ if (!collapseOverlay) return;
+
+ isCollapsed = collapsed;
+
+ if (collapsed) {
+ 
+ codeContainer.style.maxHeight = collapsedHeight + 'px';
+ codeContainer.style.overflow = 'hidden';
+ collapseOverlay.style.opacity = '1';
+ collapseOverlay.style.pointerEvents = 'auto';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = '展开';
+ }
+ collapseBtn.title = '展开';
+
+ } else {
+ 
+ codeContainer.style.maxHeight = '';
+ codeContainer.style.overflow = '';
+ collapseOverlay.style.opacity = '0';
+ collapseOverlay.style.pointerEvents = 'none';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = '折叠';
+ }
+ collapseBtn.title = '折叠';
+ }
+
+ 
+ if (animate) {
+ codeContainer.style.transition = 'max-height 0.3s ease-out';
+ setTimeout(() => {
+ codeContainer.style.transition = '';
+ }, 300);
+ }
+ }
+
+ function toggleCollapse() {
+ setCollapsed(!isCollapsed, true);
+ }
+
+ 
+ collapseBtn.addEventListener('click', toggleCollapse);
+
+ 
+ if (collapseOverlay) {
+ collapseOverlay.addEventListener('click', () => {
+ if (isCollapsed) {
+ setCollapsed(false, true);
+ }
+ });
+ }
+
+ 
+ initCollapse();
+ }
+})();
+&lt;/script>
+&lt;/li>
+&lt;li>验证安装：
+&lt;div
+ class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+ 
+ &lt;div
+ class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;div class="text-muted-foreground flex-shrink-0">
+ 
+ &lt;svg class="h-4 w-4"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+&lt;/svg>
+ &lt;/div>
+ &lt;span class="text-muted-foreground text-sm font-medium">
+ BASH
+ &lt;/span>
+ &lt;/div>
+
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;button
+ class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-4"
+ data-default-state="expanded"
+ data-collapsed="false"
+ data-auto-collapse-lines="30"
+ data-auto-collapse-height="400"
+ data-collapsed-height="120"
+ title="折叠"
+ aria-label="折叠">
+ &lt;span class="collapse-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/>&lt;/svg>
+ &lt;/span>
+ &lt;span class="collapse-text hidden sm:inline"
+ >折叠&lt;/span
+ >
+ &lt;/button>
+ &lt;button
+ class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-4"
+ title="复制"
+ aria-label="复制">
+ &lt;span class="copy-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+&lt;/svg>
+ &lt;/span>
+ &lt;span class="copy-text hidden sm:inline"
+ >复制&lt;/span
+ >
+ &lt;/button>
+ &lt;/div>
+ &lt;/div>
+
+ 
+ &lt;div class="code-block-content relative" id="code-4">
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">hugo version&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ 
+ &lt;div
+ class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+ &lt;div
+ class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+ 点击展开查看更多
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;/div>
+
+
+&lt;script>
+(function() {
+ const codeId = 'code-4';
+ const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+ const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+ const codeContainer = document.getElementById(codeId);
+
+ if (!codeContainer) return;
+
+ 
+ if (copyBtn) {
+ const copyIcon = copyBtn.querySelector('.copy-icon');
+ const copyText = copyBtn.querySelector('.copy-text');
+
+ copyBtn.addEventListener('click', async function() {
+ try {
+ 
+ let codeText = '';
+
+ 
+ const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+ if (codeTableCell) {
+ codeText = codeTableCell.textContent || codeTableCell.innerText;
+ } else {
+ 
+ const codeElement = codeContainer.querySelector('code');
+ if (codeElement) {
+ 
+ const hasInlineLineNumbers = codeElement.querySelector('.ln');
+ if (hasInlineLineNumbers) {
+ 
+ const codeLines = codeElement.querySelectorAll('.cl');
+ if (codeLines.length > 0) {
+ codeText = Array.from(codeLines)
+ .map(line => {
+ const text = line.textContent || line.innerText;
+ 
+ return text.replace(/\n+$/, '');
+ })
+ .join('\n')
+ .replace(/\n+$/, ''); 
+ } else {
+ 
+ const allText = codeElement.textContent || codeElement.innerText;
+ codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+ }
+ } else {
+ 
+ codeText = codeElement.textContent || codeElement.innerText;
+ }
+ } else {
+ 
+ codeText = codeContainer.textContent || codeContainer.innerText;
+ }
+ }
+
+ 
+ codeText = codeText.trim();
+
+ 
+ await navigator.clipboard.writeText(codeText);
+
+ 
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = '已复制';
+ }
+ copyBtn.classList.add('text-green-600');
+
+ 
+ setTimeout(() => {
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = '复制';
+ }
+ copyBtn.classList.remove('text-green-600');
+ }, 2000);
+
+ } catch (err) {
+ console.error('复制失败:', err);
+
+ 
+ const range = document.createRange();
+ const codeElement = codeContainer.querySelector('code') || codeContainer;
+ range.selectNodeContents(codeElement);
+ const selection = window.getSelection();
+ selection.removeAllRanges();
+ selection.addRange(range);
+
+ 
+ if (copyText) {
+ copyText.textContent = '已选择';
+ }
+
+ setTimeout(() => {
+ if (copyText) {
+ copyText.textContent = '复制';
+ }
+ selection.removeAllRanges();
+ }, 2000);
+ }
+ });
+ }
+
+ 
+ if (collapseBtn) {
+ const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+ const collapseText = collapseBtn.querySelector('.collapse-text');
+ const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+ 
+ let codeElement = codeContainer.querySelector('pre.chroma');
+ if (!codeElement) {
+ codeElement = codeContainer.querySelector('pre');
+ }
+
+ const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+ const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+ const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+ const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+ const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+ let isCollapsed = false;
+
+ 
+ function initCollapse() {
+ 
+ const shouldCollapse = isCollapsedAttr ||
+ defaultState === 'collapsed' ||
+ shouldAutoCollapse();
+
+ if (shouldCollapse) {
+ setCollapsed(true, false); 
+ }
+ }
+
+ function shouldAutoCollapse() {
+ 
+ if (codeElement) {
+ const lines = codeElement.querySelectorAll('.line, .cl');
+ const height = codeElement.offsetHeight;
+ return lines.length > autoCollapseLines || height > autoCollapseHeight;
+ }
+
+ 
+ const containerHeight = codeContainer.offsetHeight;
+ if (containerHeight > autoCollapseHeight) {
+ return true;
+ }
+
+ 
+ const textContent = codeContainer.textContent || codeContainer.innerText || '';
+ const estimatedLines = textContent.split('\n').length;
+ return estimatedLines > autoCollapseLines;
+ }
+
+ function setCollapsed(collapsed, animate = true) {
+ if (!collapseOverlay) return;
+
+ isCollapsed = collapsed;
+
+ if (collapsed) {
+ 
+ codeContainer.style.maxHeight = collapsedHeight + 'px';
+ codeContainer.style.overflow = 'hidden';
+ collapseOverlay.style.opacity = '1';
+ collapseOverlay.style.pointerEvents = 'auto';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = '展开';
+ }
+ collapseBtn.title = '展开';
+
+ } else {
+ 
+ codeContainer.style.maxHeight = '';
+ codeContainer.style.overflow = '';
+ collapseOverlay.style.opacity = '0';
+ collapseOverlay.style.pointerEvents = 'none';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = '折叠';
+ }
+ collapseBtn.title = '折叠';
+ }
+
+ 
+ if (animate) {
+ codeContainer.style.transition = 'max-height 0.3s ease-out';
+ setTimeout(() => {
+ codeContainer.style.transition = '';
+ }, 300);
+ }
+ }
+
+ function toggleCollapse() {
+ setCollapsed(!isCollapsed, true);
+ }
+
+ 
+ collapseBtn.addEventListener('click', toggleCollapse);
+
+ 
+ if (collapseOverlay) {
+ collapseOverlay.addEventListener('click', () => {
+ if (isCollapsed) {
+ setCollapsed(false, true);
+ }
+ });
+ }
+
+ 
+ initCollapse();
+ }
+})();
+&lt;/script>
+&lt;/li>
+&lt;/ol>
+&lt;p>更多安装方法可参考 &lt;a href="https://gohugo.io/getting-started/installing/">Hugo 官方文档&lt;/a>。&lt;/p></description></item><item><title>在 Vercel 上部署 Umami 轻松实现网站流量统计</title><link>https://heyjude.blog/zh-cn/posts/how-to-depoly-umami-with-vercel/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/zh-cn/posts/how-to-depoly-umami-with-vercel/</guid><description>&lt;p>Umami 是一个简单、快速、注重隐私的开源网站统计工具，是 Google Analytics 的理想替代品。本文将指导你如何在 Vercel 上部署 Umami，并通过 Vercel Storage 创建 Neon PostgreSQL 数据库，搭建一个零成本、轻量级的网站流量统计系统。本教程特别为 Hugo 静态网站用户优化，确保生成的 Markdown 文件适配 Hugo 的静态网页生成。&lt;/p>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>对于个人博客或中小型网站，Google Analytics 可能过于复杂，且在某些地区访问不便。而 Umami 提供了简洁的界面和核心指标，非常适合轻量级流量分析需求。通过 Vercel 的 Serverless 部署和 Vercel Storage 集成的 Neon 数据库，我们可以快速搭建一个高效的统计系统，无需服务器维护成本。&lt;/p>
 &lt;p>以下是详细的部署步骤。&lt;/p>
