@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heyjude's Blog</title><link>http://heyjude.blog/</link><description>Recent content on Heyjude's Blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://heyjude.blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Easily Deploy Umami for Website Traffic Statistics on Vercel</title><link>http://heyjude.blog/posts/how-to-depoly-umami-with-vercel/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>http://heyjude.blog/posts/how-to-depoly-umami-with-vercel/</guid><description>&lt;p>Umami is a simple, fast, and privacy-focused open-source website statistics tool, making it an ideal alternative to Google Analytics. This article will guide you on how to deploy Umami on Vercel and create a Neon PostgreSQL database via Vercel Storage, to build a zero-cost, lightweight website traffic statistics system. This tutorial is specifically optimized for Hugo static site users, ensuring that the generated Markdown files are compatible with Hugo&amp;rsquo;s static site generation.&lt;/p></description></item><item><title>Integrate Giscus Comment System into Hugo Blog</title><link>http://heyjude.blog/posts/giscus-comments-hugo/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>http://heyjude.blog/posts/giscus-comments-hugo/</guid><description>&lt;p>This is the third tutorial on building your own blog system, focusing on adding a comment system.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heyjude's Blog</title><link>https://heyjude.blog/</link><description>Recent content on Heyjude's Blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://heyjude.blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Easily Deploy Umami for Website Traffic Statistics on Vercel</title><link>https://heyjude.blog/posts/how-to-depoly-umami-with-vercel/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/posts/how-to-depoly-umami-with-vercel/</guid><description>&lt;p>Umami is a simple, fast, and privacy-focused open-source website statistics tool, making it an ideal alternative to Google Analytics. This article will guide you on how to deploy Umami on Vercel and create a Neon PostgreSQL database via Vercel Storage, to build a zero-cost, lightweight website traffic statistics system. This tutorial is specifically optimized for Hugo static site users, ensuring that the generated Markdown files are compatible with Hugo&amp;rsquo;s static site generation.&lt;/p></description></item><item><title>Integrate Giscus Comment System into Hugo Blog</title><link>https://heyjude.blog/posts/giscus-comments-hugo/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/posts/giscus-comments-hugo/</guid><description>&lt;p>This is the third tutorial on building your own blog system, focusing on adding a comment system.&lt;/p>
 &lt;p>During the blog setup process, a good comment system can greatly enhance interactivity. Today, I will introduce how to integrate &lt;a href="https://giscus.app/">Giscus&lt;/a>, an open-source comment system based on GitHub Discussions, into a Hugo blog.&lt;/p>
 &lt;h2 id="why-choose-giscus">Why Choose Giscus?&lt;/h2>
 &lt;ul>
@@ -9,7 +9,7 @@
 &lt;li>🌍 Multi-language interface support&lt;/li>
 &lt;/ul>
 &lt;h2 id="preparation">Preparation&lt;/h2>
-&lt;p>Before you start, you need:&lt;/p></description></item><item><title>Deploy Your Blog Website to GitHub Pages in 10 Minutes</title><link>http://heyjude.blog/posts/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><guid>http://heyjude.blog/posts/how-to-depoly-blog-to-github/</guid><description>&lt;p>Once we have built our blog website locally, the next step is to distribute the blog content online so that others can see it.&lt;/p>
+&lt;p>Before you start, you need:&lt;/p></description></item><item><title>Deploy Your Blog Website to GitHub Pages in 10 Minutes</title><link>https://heyjude.blog/posts/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><guid>https://heyjude.blog/posts/how-to-depoly-blog-to-github/</guid><description>&lt;p>Once we have built our blog website locally, the next step is to distribute the blog content online so that others can see it.&lt;/p>
 &lt;p>I researched the current hosting websites and found the following options:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>GitHub Pages&lt;/strong>: A free static site hosting service provided by GitHub, suitable for integration with code repositories.&lt;/li>
@@ -23,13 +23,13 @@
 &lt;li>&lt;strong>Surge.sh&lt;/strong>: A minimalist static site hosting tool, simple and quick command line deployment.&lt;/li>
 &lt;li>&lt;strong>DigitalOcean App Platform&lt;/strong>: Cloud service platform that supports automatic deployment of static websites and backend services.&lt;/li>
 &lt;/ul>
-&lt;p>These platforms each have their own characteristics, and I will introduce how to deploy on each one in upcoming articles. In this article, I will introduce how to deploy a blog website to GitHub Pages.&lt;/p></description></item><item><title>How to Auto-fill SMS Verification Codes on Mac</title><link>http://heyjude.blog/posts/how-to-use-mess-auto/</link><pubDate>Wed, 07 May 2025 22:36:09 +0800</pubDate><guid>http://heyjude.blog/posts/how-to-use-mess-auto/</guid><description>&lt;h1 id="reason">Reason&lt;/h1>
+&lt;p>These platforms each have their own characteristics, and I will introduce how to deploy on each one in upcoming articles. In this article, I will introduce how to deploy a blog website to GitHub Pages.&lt;/p></description></item><item><title>How to Auto-fill SMS Verification Codes on Mac</title><link>https://heyjude.blog/posts/how-to-use-mess-auto/</link><pubDate>Wed, 07 May 2025 22:36:09 +0800</pubDate><guid>https://heyjude.blog/posts/how-to-use-mess-auto/</guid><description>&lt;h1 id="reason">Reason&lt;/h1>
 &lt;p>We know that iOS supports auto-filling SMS verification codes, and Safari on Mac also supports it. However, non-Safari browsers do not support this feature. Yet in domestic platforms, verification codes are something we cannot escape from, so I conducted some research and found some current solutions.&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://apps.apple.com/cn/app/id6472872202">AutoCode&lt;/a>: This is a free app available on the App Store, supporting forwarding on iOS and Android.&lt;/li>
 &lt;li>&lt;a href="https://github.com/LeeeSe/MessAuto">MessAuto&lt;/a>: MessAuto is an application for macOS that automatically extracts SMS and email verification codes, developed in Rust and suitable for any app.&lt;/li>
 &lt;/ul>
-&lt;p>Since MessAuto is open-source, I chose this software.&lt;/p></description></item><item><title>Build Your Own Blog Website in 10 Minutes</title><link>http://heyjude.blog/posts/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>http://heyjude.blog/posts/how-to-create-blog-with-hugo/</guid><description>&lt;h2 id="what-is-hugo">What is Hugo&lt;/h2>
+&lt;p>Since MessAuto is open-source, I chose this software.&lt;/p></description></item><item><title>Build Your Own Blog Website in 10 Minutes</title><link>https://heyjude.blog/posts/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>https://heyjude.blog/posts/how-to-create-blog-with-hugo/</guid><description>&lt;h2 id="what-is-hugo">What is Hugo&lt;/h2>
 &lt;p>Hugo is one of the most popular open-source static site generators. Users can quickly build their own websites using Hugo.&lt;/p>
 &lt;h2 id="setup-steps">Setup Steps&lt;/h2>
 &lt;h3 id="install-hugo">Install Hugo&lt;/h3>
@@ -344,7 +344,7 @@
  loading="lazy"
  decoding="async" />&lt;/div>
 
- &lt;/figure>&lt;/p></description></item><item><title>About Me</title><link>http://heyjude.blog/about/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>http://heyjude.blog/about/</guid><description>&lt;h2 id="about-me">About Me&lt;/h2>
+ &lt;/figure>&lt;/p></description></item><item><title>About Me</title><link>https://heyjude.blog/about/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://heyjude.blog/about/</guid><description>&lt;h2 id="about-me">About Me&lt;/h2>
 &lt;p>Hello! I&amp;rsquo;m Heyjude, a software engineer passionate about technology and innovation.&lt;/p>
 &lt;h3 id="blog-purpose">Blog Purpose&lt;/h3>
 &lt;p>I created this blog to:&lt;/p>
@@ -370,7 +370,7 @@
 &lt;li>Email: &lt;a href="mailto:heyjude1587@gmail.com">heyjude1587@gmail.com&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="blog-subscription">Blog Subscription&lt;/h3>
-&lt;p>If you&amp;rsquo;re interested in my blog content, you can:&lt;/p></description></item><item><title>Contact Me</title><link>http://heyjude.blog/contact/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>http://heyjude.blog/contact/</guid><description>&lt;h2 id="contact-information">Contact Information&lt;/h2>
+&lt;p>If you&amp;rsquo;re interested in my blog content, you can:&lt;/p></description></item><item><title>Contact Me</title><link>https://heyjude.blog/contact/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://heyjude.blog/contact/</guid><description>&lt;h2 id="contact-information">Contact Information&lt;/h2>
 &lt;p>I&amp;rsquo;m glad you want to get in touch! Here are several ways to reach me:&lt;/p>
 &lt;h3 id="social-media">Social Media&lt;/h3>
 &lt;ul>
@@ -404,7 +404,7 @@
 &lt;li>Subscribe to RSS for latest updates&lt;/li>
 &lt;/ul>
 &lt;h3 id="collaboration">Collaboration&lt;/h3>
-&lt;p>I welcome contact for:&lt;/p></description></item><item><title>Privacy Policy</title><link>http://heyjude.blog/privacy/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>http://heyjude.blog/privacy/</guid><description>&lt;h2 id="privacy-policy">Privacy Policy&lt;/h2>
+&lt;p>I welcome contact for:&lt;/p></description></item><item><title>Privacy Policy</title><link>https://heyjude.blog/privacy/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://heyjude.blog/privacy/</guid><description>&lt;h2 id="privacy-policy">Privacy Policy&lt;/h2>
 &lt;p>We value your privacy. This privacy policy explains how we collect, use, and protect your personal information.&lt;/p>
 &lt;h3 id="information-collection">Information Collection&lt;/h3>
 &lt;p>When you visit our blog, we may collect the following information:&lt;/p>

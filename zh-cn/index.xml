@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heyjude's Blog</title><link>http://heyjude.blog/zh-cn/</link><description>Recent content on Heyjude's Blog</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://heyjude.blog/zh-cn/index.xml" rel="self" type="application/rss+xml"/><item><title>为 Hugo 博客接入 Giscus 评论系统</title><link>http://heyjude.blog/zh-cn/posts/giscus-comments-hugo/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>http://heyjude.blog/zh-cn/posts/giscus-comments-hugo/</guid><description>&lt;p>这是搭建自己的blog系统的第三篇教程，为博客添加评论系统。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heyjude's Blog</title><link>https://heyjude.blog/zh-cn/</link><description>Recent content on Heyjude's Blog</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://heyjude.blog/zh-cn/index.xml" rel="self" type="application/rss+xml"/><item><title>为 Hugo 博客接入 Giscus 评论系统</title><link>https://heyjude.blog/zh-cn/posts/giscus-comments-hugo/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/zh-cn/posts/giscus-comments-hugo/</guid><description>&lt;p>这是搭建自己的blog系统的第三篇教程，为博客添加评论系统。&lt;/p>
 &lt;p>在搭建博客的过程中，一个良好的评论系统能极大提升互动性。今天我将介绍如何在 Hugo 博客中集成 &lt;a href="https://giscus.app/">Giscus&lt;/a>，一个基于 GitHub Discussions 的开源评论系统。&lt;/p>
 &lt;h2 id="为什么选择-giscus">为什么选择 Giscus？&lt;/h2>
 &lt;ul>
@@ -373,7 +373,7 @@
  }
 })();
 &lt;/script>
-&lt;p>在这里你需要记住 &lt;code>data-repo&lt;/code>、&lt;code>data-repo-id&lt;/code>、&lt;code>data-category-id&lt;/code> 这三个参数，在后续的配置中会用到。&lt;/p></description></item><item><title>在 Vercel 上部署 Umami 轻松实现网站流量统计</title><link>http://heyjude.blog/zh-cn/posts/how-to-depoly-umami-with-vercel/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>http://heyjude.blog/zh-cn/posts/how-to-depoly-umami-with-vercel/</guid><description>&lt;p>Umami 是一个简单、快速、注重隐私的开源网站统计工具，是 Google Analytics 的理想替代品。本文将指导你如何在 Vercel 上部署 Umami，并通过 Vercel Storage 创建 Neon PostgreSQL 数据库，搭建一个零成本、轻量级的网站流量统计系统。本教程特别为 Hugo 静态网站用户优化，确保生成的 Markdown 文件适配 Hugo 的静态网页生成。&lt;/p>
+&lt;p>在这里你需要记住 &lt;code>data-repo&lt;/code>、&lt;code>data-repo-id&lt;/code>、&lt;code>data-category-id&lt;/code> 这三个参数，在后续的配置中会用到。&lt;/p></description></item><item><title>在 Vercel 上部署 Umami 轻松实现网站流量统计</title><link>https://heyjude.blog/zh-cn/posts/how-to-depoly-umami-with-vercel/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/zh-cn/posts/how-to-depoly-umami-with-vercel/</guid><description>&lt;p>Umami 是一个简单、快速、注重隐私的开源网站统计工具，是 Google Analytics 的理想替代品。本文将指导你如何在 Vercel 上部署 Umami，并通过 Vercel Storage 创建 Neon PostgreSQL 数据库，搭建一个零成本、轻量级的网站流量统计系统。本教程特别为 Hugo 静态网站用户优化，确保生成的 Markdown 文件适配 Hugo 的静态网页生成。&lt;/p>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>对于个人博客或中小型网站，Google Analytics 可能过于复杂，且在某些地区访问不便。而 Umami 提供了简洁的界面和核心指标，非常适合轻量级流量分析需求。通过 Vercel 的 Serverless 部署和 Vercel Storage 集成的 Neon 数据库，我们可以快速搭建一个高效的统计系统，无需服务器维护成本。&lt;/p>
 &lt;p>以下是详细的部署步骤。&lt;/p>
@@ -1057,7 +1057,7 @@
 复制此代码。&lt;/li>
 &lt;/ol>
 &lt;h2 id="步骤-5在-hugo-网站中嵌入跟踪代码">步骤 5：在 Hugo 网站中嵌入跟踪代码&lt;/h2>
-&lt;p>为了让 Umami 统计你的 Hugo 网站流量，需要将跟踪代码嵌入到网站中。这个一般需要你使用的hugo主题支持，如果不支持，则需要自己修改hugo主题。&lt;/p></description></item><item><title>10分钟部署你的blog网站到github pages</title><link>http://heyjude.blog/zh-cn/posts/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><guid>http://heyjude.blog/zh-cn/posts/how-to-depoly-blog-to-github/</guid><description>&lt;p>当我们在本地建立了我们的blog网站后，下一步就可以将blog内容分发到网络上，这样别人就可以看到了。&lt;/p>
+&lt;p>为了让 Umami 统计你的 Hugo 网站流量，需要将跟踪代码嵌入到网站中。这个一般需要你使用的hugo主题支持，如果不支持，则需要自己修改hugo主题。&lt;/p></description></item><item><title>10分钟部署你的blog网站到github pages</title><link>https://heyjude.blog/zh-cn/posts/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><guid>https://heyjude.blog/zh-cn/posts/how-to-depoly-blog-to-github/</guid><description>&lt;p>当我们在本地建立了我们的blog网站后，下一步就可以将blog内容分发到网络上，这样别人就可以看到了。&lt;/p>
 &lt;p>我调研了一下目前的托管网站，有以下选择：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>GitHub Pages&lt;/strong>：GitHub 提供的免费静态站点托管服务，适合与代码仓库集成。&lt;/li>
@@ -1406,7 +1406,7 @@ yourusername.github.io/
 &lt;li>在 yourusername.github.io 仓库中，设置 GitHub Pages 的源分支为 main（或者 master）。&lt;/li>
 &lt;/ol>
 &lt;h3 id="步骤二设置-github-actions-自动化部署">步骤二：设置 GitHub Actions 自动化部署&lt;/h3>
-&lt;p>在 my-hugo-site 仓库中，创建 .github/workflows/deploy.yml 文件，设置自动构建并将静态文件推送到 yourusername.github.io 仓库。&lt;/p></description></item><item><title>mac如何自动填充手机验证码</title><link>http://heyjude.blog/zh-cn/posts/how-to-use-mess-auto/</link><pubDate>Wed, 07 May 2025 22:36:09 +0800</pubDate><guid>http://heyjude.blog/zh-cn/posts/how-to-use-mess-auto/</guid><description>&lt;h1 id="缘由">缘由&lt;/h1>
+&lt;p>在 my-hugo-site 仓库中，创建 .github/workflows/deploy.yml 文件，设置自动构建并将静态文件推送到 yourusername.github.io 仓库。&lt;/p></description></item><item><title>mac如何自动填充手机验证码</title><link>https://heyjude.blog/zh-cn/posts/how-to-use-mess-auto/</link><pubDate>Wed, 07 May 2025 22:36:09 +0800</pubDate><guid>https://heyjude.blog/zh-cn/posts/how-to-use-mess-auto/</guid><description>&lt;h1 id="缘由">缘由&lt;/h1>
 &lt;p>我们知道ios是支持自动填充短信验证码的，在mac上之后safari也是支持的，但是对于非safari浏览器来说，就不支持了。但是在国内平台上面，验证码又是一个逃不过的东西，因此我调研了一下，找到了目前的一些方案。&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://apps.apple.com/cn/app/id6472872202">AutoCode&lt;/a>： 这是在app store上面一款免费的软件，支持ios和Andriod转发。&lt;/li>
@@ -1734,7 +1734,7 @@ yourusername.github.io/
  loading="lazy"
  decoding="async" />&lt;/div>
 
- &lt;/figure>&lt;/p></description></item><item><title>10分钟搭建属于自己的blog网站</title><link>http://heyjude.blog/zh-cn/posts/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>http://heyjude.blog/zh-cn/posts/how-to-create-blog-with-hugo/</guid><description>&lt;h2 id="hugo是什么">hugo是什么&lt;/h2>
+ &lt;/figure>&lt;/p></description></item><item><title>10分钟搭建属于自己的blog网站</title><link>https://heyjude.blog/zh-cn/posts/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>https://heyjude.blog/zh-cn/posts/how-to-create-blog-with-hugo/</guid><description>&lt;h2 id="hugo是什么">hugo是什么&lt;/h2>
 &lt;p>Hugo 是最受欢迎的开源静态网站生成器之一。用户可以使用 Hugo 来快速搭建自己的网站。&lt;/p>
 &lt;h2 id="搭建步骤">搭建步骤&lt;/h2>
 &lt;h3 id="安装hugo">安装hugo&lt;/h3>
@@ -2049,7 +2049,7 @@ yourusername.github.io/
  loading="lazy"
  decoding="async" />&lt;/div>
 
- &lt;/figure>&lt;/p></description></item><item><title>关于我</title><link>http://heyjude.blog/zh-cn/about/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>http://heyjude.blog/zh-cn/about/</guid><description>&lt;h2 id="关于我">关于我&lt;/h2>
+ &lt;/figure>&lt;/p></description></item><item><title>关于我</title><link>https://heyjude.blog/zh-cn/about/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://heyjude.blog/zh-cn/about/</guid><description>&lt;h2 id="关于我">关于我&lt;/h2>
 &lt;p>你好！我是Heyjude，一名热爱技术和创新的软件工程师。&lt;/p>
 &lt;h3 id="博客目的">博客目的&lt;/h3>
 &lt;p>创建这个博客的目的是：&lt;/p>
@@ -2081,7 +2081,7 @@ yourusername.github.io/
 &lt;li>关注我的社交媒体账号&lt;/li>
 &lt;li>定期访问本站&lt;/li>
 &lt;/ul>
-&lt;p>感谢访问我的博客！&lt;/p></description></item><item><title>联系我</title><link>http://heyjude.blog/zh-cn/contact/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>http://heyjude.blog/zh-cn/contact/</guid><description>&lt;h2 id="联系方式">联系方式&lt;/h2>
+&lt;p>感谢访问我的博客！&lt;/p></description></item><item><title>联系我</title><link>https://heyjude.blog/zh-cn/contact/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://heyjude.blog/zh-cn/contact/</guid><description>&lt;h2 id="联系方式">联系方式&lt;/h2>
 &lt;p>很高兴你想要联系我！以下是几种可以找到我的方式：&lt;/p>
 &lt;h3 id="社交媒体">社交媒体&lt;/h3>
 &lt;ul>
@@ -2128,7 +2128,7 @@ yourusername.github.io/
 &lt;li>社交媒体消息可能会更快回复&lt;/li>
 &lt;li>如果是紧急事项，建议通过邮件联系&lt;/li>
 &lt;/ul>
-&lt;p>期待与你的交流！&lt;/p></description></item><item><title>隐私政策</title><link>http://heyjude.blog/zh-cn/privacy/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>http://heyjude.blog/zh-cn/privacy/</guid><description>&lt;h2 id="隐私政策">隐私政策&lt;/h2>
+&lt;p>期待与你的交流！&lt;/p></description></item><item><title>隐私政策</title><link>https://heyjude.blog/zh-cn/privacy/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://heyjude.blog/zh-cn/privacy/</guid><description>&lt;h2 id="隐私政策">隐私政策&lt;/h2>
 &lt;p>我们非常重视您的隐私。本隐私政策旨在说明我们如何收集、使用和保护您的个人信息。&lt;/p>
 &lt;h3 id="信息收集">信息收集&lt;/h3>
 &lt;p>在您访问本博客时，我们可能会收集以下信息：&lt;/p>
