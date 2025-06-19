@@ -1544,16 +1544,20 @@
 &lt;li>打开你的博客代码仓库（例如 &lt;code>username/blog&lt;/code>）。&lt;/li>
 &lt;li>点击 &lt;strong>Settings&lt;/strong> → &lt;strong>Features&lt;/strong> → 勾选 &lt;strong>Discussions&lt;/strong>。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/06/8c0271325d91ad29527d1acef14fd869.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/06/8c0271325d91ad29527d1acef14fd869.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>&lt;/li>
 &lt;/ol>
@@ -1571,16 +1575,20 @@
 &lt;/li>
 &lt;li>复制生成的 &lt;code>&amp;lt;script&amp;gt;&lt;/code> 代码。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/06/116ebde5a465cfbea4f3c5b84192be3d.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/06/116ebde5a465cfbea4f3c5b84192be3d.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>
 例如生成的代码如下：&lt;/li>
@@ -1932,16 +1940,20 @@
 &lt;li>在 Vercel 仪表板中，进入你的 Umami 项目。&lt;/li>
 &lt;li>点击顶部导航的 &lt;strong>Storage&lt;/strong> 标签，然后选择 &lt;strong>Create Database&lt;/strong>。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/06/cba773362305001171fb5d0defb4f960.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/06/cba773362305001171fb5d0defb4f960.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>&lt;/li>
 &lt;li>在数据库类型中选择 &lt;strong>Neon&lt;/strong>，并登录你的 Neon 账户以授权 Vercel 访问。&lt;/li>
@@ -2267,16 +2279,20 @@
 &lt;li>登录后立即更改密码以确保安全。&lt;/li>
 &lt;li>在 Umami 仪表板中，点击 &lt;strong>Add Website&lt;/strong>，输入你的网站信息（如域名、名称）。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/06/2b0b37c13001ea761ffcd370f170defc.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/06/2b0b37c13001ea761ffcd370f170defc.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>&lt;/li>
 &lt;li>Umami 会生成一段 JavaScript 跟踪代码，格式如下：
@@ -3247,16 +3263,20 @@ yourusername.github.io/
 &lt;/script>
 &lt;p>当编译好之后，会在当前目录下的&lt;code>target/release/bundle/osx/MessAuto.app&lt;/code>构建包。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/05/c090074301dfda862dea2b0797bcdeec.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/05/c090074301dfda862dea2b0797bcdeec.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>&lt;/p></description></item><item><title>10分钟搭建属于自己的blog网站</title><link>https://heyjude.blog/zh-cn/posts/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>https://heyjude.blog/zh-cn/posts/how-to-create-blog-with-hugo/</guid><description>&lt;h2 id="hugo是什么">hugo是什么&lt;/h2>
 &lt;p>Hugo 是最受欢迎的开源静态网站生成器之一。用户可以使用 Hugo 来快速搭建自己的网站。&lt;/p>
@@ -3562,15 +3582,19 @@ yourusername.github.io/
 })();
 &lt;/script>
 &lt;p>
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png"
  alt="install"
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png"
+ data-gallery-alt="install"
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>&lt;/p></description></item></channel></rss>

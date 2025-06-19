@@ -20,16 +20,20 @@
 &lt;li>打开你的博客代码仓库（例如 &lt;code>username/blog&lt;/code>）。&lt;/li>
 &lt;li>点击 &lt;strong>Settings&lt;/strong> → &lt;strong>Features&lt;/strong> → 勾选 &lt;strong>Discussions&lt;/strong>。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/06/8c0271325d91ad29527d1acef14fd869.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/06/8c0271325d91ad29527d1acef14fd869.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>&lt;/li>
 &lt;/ol>
@@ -47,16 +51,20 @@
 &lt;/li>
 &lt;li>复制生成的 &lt;code>&amp;lt;script&amp;gt;&lt;/code> 代码。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/06/116ebde5a465cfbea4f3c5b84192be3d.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/06/116ebde5a465cfbea4f3c5b84192be3d.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>
 例如生成的代码如下：&lt;/li>
@@ -408,16 +416,20 @@
 &lt;li>在 Vercel 仪表板中，进入你的 Umami 项目。&lt;/li>
 &lt;li>点击顶部导航的 &lt;strong>Storage&lt;/strong> 标签，然后选择 &lt;strong>Create Database&lt;/strong>。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/06/cba773362305001171fb5d0defb4f960.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/06/cba773362305001171fb5d0defb4f960.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>&lt;/li>
 &lt;li>在数据库类型中选择 &lt;strong>Neon&lt;/strong>，并登录你的 Neon 账户以授权 Vercel 访问。&lt;/li>
@@ -743,16 +755,20 @@
 &lt;li>登录后立即更改密码以确保安全。&lt;/li>
 &lt;li>在 Umami 仪表板中，点击 &lt;strong>Add Website&lt;/strong>，输入你的网站信息（如域名、名称）。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/06/2b0b37c13001ea761ffcd370f170defc.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/06/2b0b37c13001ea761ffcd370f170defc.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>&lt;/li>
 &lt;li>Umami 会生成一段 JavaScript 跟踪代码，格式如下：

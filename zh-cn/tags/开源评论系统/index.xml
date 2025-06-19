@@ -20,16 +20,20 @@
 &lt;li>打开你的博客代码仓库（例如 &lt;code>username/blog&lt;/code>）。&lt;/li>
 &lt;li>点击 &lt;strong>Settings&lt;/strong> → &lt;strong>Features&lt;/strong> → 勾选 &lt;strong>Discussions&lt;/strong>。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/06/8c0271325d91ad29527d1acef14fd869.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/06/8c0271325d91ad29527d1acef14fd869.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>&lt;/li>
 &lt;/ol>
@@ -47,16 +51,20 @@
 &lt;/li>
 &lt;li>复制生成的 &lt;code>&amp;lt;script&amp;gt;&lt;/code> 代码。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/06/116ebde5a465cfbea4f3c5b84192be3d.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/06/116ebde5a465cfbea4f3c5b84192be3d.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>
 例如生成的代码如下：&lt;/li>

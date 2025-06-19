@@ -315,15 +315,19 @@
 &lt;/script>
 &lt;p>当编译好之后，会在当前目录下的&lt;code>target/release/bundle/osx/MessAuto.app&lt;/code>构建包。
 
-&lt;figure class="image-figure not-prose my-8" data-gallery-enabled="false">
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
  &lt;div class="image-container">
  
  &lt;img
  src="https://img.music-poster.art/2025/05/c090074301dfda862dea2b0797bcdeec.png"
  alt=""
  
- 
  loading="lazy"
- decoding="async" />&lt;/div>
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/05/c090074301dfda862dea2b0797bcdeec.png"
+ data-gallery-alt=""
+ data-gallery-title="" />&lt;/div>
 
  &lt;/figure>&lt;/p></description></item></channel></rss>
