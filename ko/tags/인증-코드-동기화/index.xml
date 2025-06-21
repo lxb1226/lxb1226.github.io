@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>인증 코드 동기화 on Heyjude's Blog</title><link>https://heyjude.blog/ko/tags/%EC%9D%B8%EC%A6%9D-%EC%BD%94%EB%93%9C-%EB%8F%99%EA%B8%B0%ED%99%94/</link><description>Recent content in 인증 코드 동기화 on Heyjude's Blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Wed, 07 May 2025 22:36:09 +0800</lastBuildDate><atom:link href="https://heyjude.blog/ko/tags/%EC%9D%B8%EC%A6%9D-%EC%BD%94%EB%93%9C-%EB%8F%99%EA%B8%B0%ED%99%94/index.xml" rel="self" type="application/rss+xml"/><item><title>맥에서 모바일 인증 코드를 자동으로 채우는 방법</title><link>https://heyjude.blog/ko/posts/how-to-use-mess-auto/</link><pubDate>Wed, 07 May 2025 22:36:09 +0800</pubDate><guid>https://heyjude.blog/ko/posts/how-to-use-mess-auto/</guid><description>&lt;h1 id="이유">이유&lt;/h1>
+&lt;p>우리는 iOS가 SMS 인증 코드의 자동 채우기를 지원한다는 것을 알고 있으며, 맥에서도 사파리는 이를 지원하지만, 비사파리 브라우저에서는 지원하지 않습니다. 그러나 국내 플랫폼에서는 인증 코드가 피할 수 없는 것이므로, 이에 대해 조사해보았고 현재 사용 가능한 몇 가지 솔루션을 찾았습니다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://apps.apple.com/cn/app/id6472872202">AutoCode&lt;/a>： App Store에서 무료로 사용할 수 있는 소프트웨어로, iOS와 안드로이드 간의 전송을 지원합니다.&lt;/li>
+&lt;li>&lt;a href="https://github.com/LeeeSe/MessAuto">MessAuto&lt;/a>： MessAuto는 macOS 플랫폼에서 SMS 및 이메일 인증 코드를 자동으로 추출하는 소프트웨어로, Rust로 개발되었으며 모든 앱에 적합합니다.&lt;/li>
+&lt;/ul>
+&lt;p>MessAuto는 오픈 소스이기 때문에 이 소프트웨어를 선택했습니다.&lt;/p></description></item></channel></rss>

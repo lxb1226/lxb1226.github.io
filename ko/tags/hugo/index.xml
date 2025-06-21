@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Heyjude's Blog</title><link>https://heyjude.blog/ko/tags/hugo/</link><description>Recent content in Hugo on Heyjude's Blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Mon, 16 Jun 2025 20:29:00 +0800</lastBuildDate><atom:link href="https://heyjude.blog/ko/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo를 사용하여 블로그를 구축하고 Cloudflare Pages에 배포하기</title><link>https://heyjude.blog/ko/posts/deploy-hugo-to-cloudflare/</link><pubDate>Mon, 16 Jun 2025 20:29:00 +0800</pubDate><guid>https://heyjude.blog/ko/posts/deploy-hugo-to-cloudflare/</guid><description>&lt;h1 id="hugo를-사용하여-블로그를-구축하고-cloudflare-pages에-배포하기">Hugo를 사용하여 블로그를 구축하고 Cloudflare Pages에 배포하기&lt;/h1>
+&lt;p>이 글에서는 &lt;a href="https://gohugo.io/">Hugo&lt;/a>를 사용하여 개인 블로그를 구축하고 이를 &lt;a href="https://pages.cloudflare.com/">Cloudflare Pages&lt;/a>에 배포하는 전체 과정을 단계별로 안내하겠습니다. Hugo는 빠르고 유연한 정적 웹사이트 생성기이며, Cloudflare Pages는 무료 정적 웹사이트 호스팅 서비스를 제공하여 글로벌 CDN 가속과 결합해 블로그를 빠르게 온라인으로 만들고 좋은 이용 경험을 제공합니다. 기술 초보자든 어느 정도 경험이 있는 개발자든 이 튜토리얼은 여러분이 자신만의 블로그를 빠르게 구축하는 데 도움을 줄 것입니다.&lt;/p>
+&lt;h2 id="왜-hugo와-cloudflare-pages를-선택해야-할까요">왜 Hugo와 Cloudflare Pages를 선택해야 할까요?&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Hugo&lt;/strong>: Go 언어로 작성되어 생성 속도가 매우 빠르며, 풍부한 테마와 Markdown 포맷을 지원하여 블로그와 문서 웹사이트에 적합합니다.&lt;/li>
+&lt;li>&lt;strong>Cloudflare Pages&lt;/strong>: GitHub와의 원활한 통합, 자동 배포, 무료 SSL 인증서, 그리고 글로벌 CDN 가속을 제공하여, 국내에서의 접근 속도가 GitHub Pages보다 우수합니다.&lt;/li>
+&lt;li>&lt;strong>비용&lt;/strong>: 두 가지를 결합하면 완전히 무료로 사용할 수 있어 개인 블로그나 소규모 프로젝트에 적합합니다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="사전-준비">사전 준비&lt;/h2>
+&lt;p>시작하기 전에 다음 도구와 계정을 준비해야 합니다:&lt;/p></description></item><item><title>Hugo 블로그에 Giscus 댓글 시스템 통합하기</title><link>https://heyjude.blog/ko/posts/giscus-comments-hugo/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/ko/posts/giscus-comments-hugo/</guid><description>&lt;p>이것은 나만의 블로그 시스템을 구축하는 세 번째 튜토리얼로, 블로그에 댓글 시스템을 추가하는 방법입니다.&lt;/p>
+&lt;p>블로그를 구축하는 과정에서, 훌륭한 댓글 시스템은 상호작용을 크게 향상시킬 수 있습니다. 오늘 저는 Hugo 블로그에 &lt;a href="https://giscus.app/">Giscus&lt;/a>라는 GitHub Discussions 기반의 오픈소스 댓글 시스템을 통합하는 방법을 소개할 것입니다.&lt;/p>
+&lt;h2 id="왜-giscus를-선택해야-할까요">왜 Giscus를 선택해야 할까요?&lt;/h2>
+&lt;ul>
+&lt;li>🚀 서버가 필요 없고, GitHub Discussions 기반&lt;/li>
+&lt;li>🔒 안전하고 신뢰할 수 있으며, 댓글 데이터는 GitHub에 저장&lt;/li>
+&lt;li>🧩 다크 모드 및 적응형 테마 지원&lt;/li>
+&lt;li>💬 익명 댓글 지원(선택적)&lt;/li>
+&lt;li>🌍 다국어 인터페이스 지원&lt;/li>
+&lt;/ul>
+&lt;h2 id="준비-사항">준비 사항&lt;/h2>
+&lt;p>시작하기 전에, 다음이 필요합니다:&lt;/p></description></item><item><title>Vercel에서 Umami로 웹사이트 트래픽 통계 쉽게 구현하기</title><link>https://heyjude.blog/ko/posts/how-to-depoly-umami-with-vercel/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/ko/posts/how-to-depoly-umami-with-vercel/</guid><description>&lt;p>Umami는 간단하고 빠르며 개인 정보 보호에 중점을 둔 오픈소스 웹사이트 통계 도구로, Google Analytics의 이상적인 대안입니다. 본 문서는 Vercel에서 Umami를 배포하는 방법과 Vercel Storage를 통해 Neon PostgreSQL 데이터베이스를 만드는 방법을 안내하여 제로 비용의 경량 웹사이트 트래픽 통계 시스템을 구축하는 방법을 설명합니다. 본 튜토리얼은 Hugo 정적 웹사이트 사용자를 위해 특별히 최적화되어, 생성된 Markdown 파일이 Hugo의 정적 웹페이지 생성에 적합하도록 보장합니다.&lt;/p>
+&lt;h2 id="서론">서론&lt;/h2>
+&lt;p>개인 블로그나 중소형 웹사이트의 경우 Google Analytics는 과도하게 복잡할 수 있으며, 일부 지역에서는 접근이 불편할 수 있습니다. Umami는 간결한 인터페이스와 핵심 지표를 제공하여 가벼운 트래픽 분석 요구에 매우 적합합니다. Vercel의 Serverless 배포와 Vercel Storage와 통합된 Neon 데이터베이스를 통해 우리는 서버 유지 관리 비용없이 높은 효율의 통계 시스템을 신속하게 구축할 수 있습니다.&lt;/p></description></item><item><title>10분 안에 블로그 웹사이트를 GitHub Pages에 배포하기</title><link>https://heyjude.blog/ko/posts/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><guid>https://heyjude.blog/ko/posts/how-to-depoly-blog-to-github/</guid><description>&lt;p>우리가 로컬에서 블로그 웹사이트를 구축한 후, 다음 단계는 블로그 내용을 인터넷에 배포하여 다른 사람들이 볼 수 있도록 하는 것입니다.&lt;/p>
+&lt;p>저는 현재의 호스팅 사이트를 조사해봤고 다음과 같은 선택지가 있습니다:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>GitHub Pages&lt;/strong>: GitHub이 제공하는 무료 정적 사이트 호스팅 서비스로, 코드 저장소와 통합하기에 적합합니다.&lt;/li>
+&lt;li>&lt;strong>Netlify&lt;/strong>: 자동 구축 및 배포를 지원하며, 무료 패키에서 기능이 풍부하고 Hugo 지원이 매우 좋습니다.&lt;/li>
+&lt;li>&lt;strong>Vercel&lt;/strong>: Next.js 팀이 개발했으며, 배포 속도가 빠르고 프론트엔드 프로젝트에 적합합니다.&lt;/li>
+&lt;li>&lt;strong>Cloudflare Pages&lt;/strong>: Cloudflare가 제공하는 정적 사이트 호스팅 서비스로, CDN과 보안 가속이 포함되어 있습니다.&lt;/li>
+&lt;li>&lt;strong>Firebase Hosting&lt;/strong>: 구글이 출시한 프론트엔드 호스팅 플랫폼으로, 프론트엔드 애플리케이션과 함께 사용하는 데 적합합니다.&lt;/li>
+&lt;li>&lt;strong>Amazon S3 + CloudFront&lt;/strong>: 고성능의 호스팅 및 배포 솔루션으로, 전문 배포에 적합합니다.&lt;/li>
+&lt;li>&lt;strong>GitLab Pages&lt;/strong>: GitLab이 제공하는 정적 사이트 호스팅 서비스로, CI 설정을 통해 자동 구축할 수 있습니다.&lt;/li>
+&lt;li>&lt;strong>Render&lt;/strong>: 간결한 풀스택 호스팅 플랫폼으로, Hugo 웹사이트의 자동 배포를 지원합니다.&lt;/li>
+&lt;li>&lt;strong>Surge.sh&lt;/strong>: 매우 간단한 스타일의 정적 사이트 호스팅 도구로, 명령줄 배포가 간단하고 빠릅니다.&lt;/li>
+&lt;li>&lt;strong>DigitalOcean App Platform&lt;/strong>: 클라우드 서비스 플랫폼으로, 정적 웹사이트 및 백엔드 서비스의 자동 배포를 지원합니다.&lt;/li>
+&lt;/ul>
+&lt;p>이 플랫폼들은 각각의 특징이 있으며, 이후의 기사에서 하나씩 배포 방법을 소개할 것입니다. 이번 기사에서는 블로그 웹사이트를 GitHub Pages에 배포하는 방법을 소개하겠습니다.&lt;/p></description></item><item><title>10분 만에 나만의 블로그 사이트 만들기</title><link>https://heyjude.blog/ko/posts/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>https://heyjude.blog/ko/posts/how-to-create-blog-with-hugo/</guid><description>&lt;h2 id="hugo란-무엇인가">hugo란 무엇인가&lt;/h2>
+&lt;p>Hugo는 가장 인기 있는 오픈 소스 정적 사이트 생성기 중 하나입니다. 사용자들은 Hugo를 사용하여 빠르게 자신만의 웹사이트를 만들 수 있습니다.&lt;/p>
+&lt;h2 id="구축-단계">구축 단계&lt;/h2>
+&lt;h3 id="hugo-설치">hugo 설치&lt;/h3>
+&lt;p>맥에서 hugo를 설치하려면 다음 명령어를 사용할 수 있습니다:&lt;/p>
+&lt;div
+ class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+ 
+ &lt;div
+ class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;div class="text-muted-foreground flex-shrink-0">
+ 
+ &lt;svg class="h-4 w-4"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+&lt;/svg>
+ &lt;/div>
+ &lt;span class="text-muted-foreground text-sm font-medium">
+ BASH
+ &lt;/span>
+ &lt;/div>
+
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;button
+ class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-0"
+ data-default-state="expanded"
+ data-collapsed="false"
+ data-auto-collapse-lines="30"
+ data-auto-collapse-height="400"
+ data-collapsed-height="120"
+ title="Collapse"
+ aria-label="Collapse">
+ &lt;span class="collapse-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/>&lt;/svg>
+ &lt;/span>
+ &lt;span class="collapse-text hidden sm:inline"
+ >Collapse&lt;/span
+ >
+ &lt;/button>
+ &lt;button
+ class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-0"
+ title="Copy"
+ aria-label="Copy">
+ &lt;span class="copy-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+&lt;/svg>
+ &lt;/span>
+ &lt;span class="copy-text hidden sm:inline"
+ >Copy&lt;/span
+ >
+ &lt;/button>
+ &lt;/div>
+ &lt;/div>
+
+ 
+ &lt;div class="code-block-content relative" id="code-0">
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">brew install hugo&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ 
+ &lt;div
+ class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+ &lt;div
+ class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+ Click to expand and view more
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;/div>
+
+
+&lt;script>
+(function() {
+ const codeId = 'code-0';
+ const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+ const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+ const codeContainer = document.getElementById(codeId);
+
+ if (!codeContainer) return;
+
+ 
+ if (copyBtn) {
+ const copyIcon = copyBtn.querySelector('.copy-icon');
+ const copyText = copyBtn.querySelector('.copy-text');
+
+ copyBtn.addEventListener('click', async function() {
+ try {
+ 
+ let codeText = '';
+
+ 
+ const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+ if (codeTableCell) {
+ codeText = codeTableCell.textContent || codeTableCell.innerText;
+ } else {
+ 
+ const codeElement = codeContainer.querySelector('code');
+ if (codeElement) {
+ 
+ const hasInlineLineNumbers = codeElement.querySelector('.ln');
+ if (hasInlineLineNumbers) {
+ 
+ const codeLines = codeElement.querySelectorAll('.cl');
+ if (codeLines.length > 0) {
+ codeText = Array.from(codeLines)
+ .map(line => {
+ const text = line.textContent || line.innerText;
+ 
+ return text.replace(/\n+$/, '');
+ })
+ .join('\n')
+ .replace(/\n+$/, ''); 
+ } else {
+ 
+ const allText = codeElement.textContent || codeElement.innerText;
+ codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+ }
+ } else {
+ 
+ codeText = codeElement.textContent || codeElement.innerText;
+ }
+ } else {
+ 
+ codeText = codeContainer.textContent || codeContainer.innerText;
+ }
+ }
+
+ 
+ codeText = codeText.trim();
+
+ 
+ await navigator.clipboard.writeText(codeText);
+
+ 
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = 'Copied';
+ }
+ copyBtn.classList.add('text-green-600');
+
+ 
+ setTimeout(() => {
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = 'Copy';
+ }
+ copyBtn.classList.remove('text-green-600');
+ }, 2000);
+
+ } catch (err) {
+ console.error('复制失败:', err);
+
+ 
+ const range = document.createRange();
+ const codeElement = codeContainer.querySelector('code') || codeContainer;
+ range.selectNodeContents(codeElement);
+ const selection = window.getSelection();
+ selection.removeAllRanges();
+ selection.addRange(range);
+
+ 
+ if (copyText) {
+ copyText.textContent = 'Selected';
+ }
+
+ setTimeout(() => {
+ if (copyText) {
+ copyText.textContent = 'Copy';
+ }
+ selection.removeAllRanges();
+ }, 2000);
+ }
+ });
+ }
+
+ 
+ if (collapseBtn) {
+ const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+ const collapseText = collapseBtn.querySelector('.collapse-text');
+ const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+ 
+ let codeElement = codeContainer.querySelector('pre.chroma');
+ if (!codeElement) {
+ codeElement = codeContainer.querySelector('pre');
+ }
+
+ const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+ const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+ const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+ const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+ const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+ let isCollapsed = false;
+
+ 
+ function initCollapse() {
+ 
+ const shouldCollapse = isCollapsedAttr ||
+ defaultState === 'collapsed' ||
+ shouldAutoCollapse();
+
+ if (shouldCollapse) {
+ setCollapsed(true, false); 
+ }
+ }
+
+ function shouldAutoCollapse() {
+ 
+ if (codeElement) {
+ const lines = codeElement.querySelectorAll('.line, .cl');
+ const height = codeElement.offsetHeight;
+ return lines.length > autoCollapseLines || height > autoCollapseHeight;
+ }
+
+ 
+ const containerHeight = codeContainer.offsetHeight;
+ if (containerHeight > autoCollapseHeight) {
+ return true;
+ }
+
+ 
+ const textContent = codeContainer.textContent || codeContainer.innerText || '';
+ const estimatedLines = textContent.split('\n').length;
+ return estimatedLines > autoCollapseLines;
+ }
+
+ function setCollapsed(collapsed, animate = true) {
+ if (!collapseOverlay) return;
+
+ isCollapsed = collapsed;
+
+ if (collapsed) {
+ 
+ codeContainer.style.maxHeight = collapsedHeight + 'px';
+ codeContainer.style.overflow = 'hidden';
+ collapseOverlay.style.opacity = '1';
+ collapseOverlay.style.pointerEvents = 'auto';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = 'Expand';
+ }
+ collapseBtn.title = 'Expand';
+
+ } else {
+ 
+ codeContainer.style.maxHeight = '';
+ codeContainer.style.overflow = '';
+ collapseOverlay.style.opacity = '0';
+ collapseOverlay.style.pointerEvents = 'none';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = 'Collapse';
+ }
+ collapseBtn.title = 'Collapse';
+ }
+
+ 
+ if (animate) {
+ codeContainer.style.transition = 'max-height 0.3s ease-out';
+ setTimeout(() => {
+ codeContainer.style.transition = '';
+ }, 300);
+ }
+ }
+
+ function toggleCollapse() {
+ setCollapsed(!isCollapsed, true);
+ }
+
+ 
+ collapseBtn.addEventListener('click', toggleCollapse);
+
+ 
+ if (collapseOverlay) {
+ collapseOverlay.addEventListener('click', () => {
+ if (isCollapsed) {
+ setCollapsed(false, true);
+ }
+ });
+ }
+
+ 
+ initCollapse();
+ }
+})();
+&lt;/script>
+&lt;p>
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
+ &lt;div class="image-container">
+ 
+ &lt;img
+ src="https://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png"
+ alt="install"
+ 
+ loading="lazy"
+ decoding="async" 
+ data-gallery-src="https://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png"
+ data-gallery-alt="install"
+ data-gallery-title="" />&lt;/div>
+
+ &lt;/figure>&lt;/p></description></item></channel></rss>

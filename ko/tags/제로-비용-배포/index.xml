@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>제로 비용 배포 on Heyjude's Blog</title><link>https://heyjude.blog/ko/tags/%EC%A0%9C%EB%A1%9C-%EB%B9%84%EC%9A%A9-%EB%B0%B0%ED%8F%AC/</link><description>Recent content in 제로 비용 배포 on Heyjude's Blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://heyjude.blog/ko/tags/%EC%A0%9C%EB%A1%9C-%EB%B9%84%EC%9A%A9-%EB%B0%B0%ED%8F%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 블로그에 Giscus 댓글 시스템 통합하기</title><link>https://heyjude.blog/ko/posts/giscus-comments-hugo/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/ko/posts/giscus-comments-hugo/</guid><description>&lt;p>이것은 나만의 블로그 시스템을 구축하는 세 번째 튜토리얼로, 블로그에 댓글 시스템을 추가하는 방법입니다.&lt;/p>
+&lt;p>블로그를 구축하는 과정에서, 훌륭한 댓글 시스템은 상호작용을 크게 향상시킬 수 있습니다. 오늘 저는 Hugo 블로그에 &lt;a href="https://giscus.app/">Giscus&lt;/a>라는 GitHub Discussions 기반의 오픈소스 댓글 시스템을 통합하는 방법을 소개할 것입니다.&lt;/p>
+&lt;h2 id="왜-giscus를-선택해야-할까요">왜 Giscus를 선택해야 할까요?&lt;/h2>
+&lt;ul>
+&lt;li>🚀 서버가 필요 없고, GitHub Discussions 기반&lt;/li>
+&lt;li>🔒 안전하고 신뢰할 수 있으며, 댓글 데이터는 GitHub에 저장&lt;/li>
+&lt;li>🧩 다크 모드 및 적응형 테마 지원&lt;/li>
+&lt;li>💬 익명 댓글 지원(선택적)&lt;/li>
+&lt;li>🌍 다국어 인터페이스 지원&lt;/li>
+&lt;/ul>
+&lt;h2 id="준비-사항">준비 사항&lt;/h2>
+&lt;p>시작하기 전에, 다음이 필요합니다:&lt;/p></description></item><item><title>Vercel에서 Umami로 웹사이트 트래픽 통계 쉽게 구현하기</title><link>https://heyjude.blog/ko/posts/how-to-depoly-umami-with-vercel/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/ko/posts/how-to-depoly-umami-with-vercel/</guid><description>&lt;p>Umami는 간단하고 빠르며 개인 정보 보호에 중점을 둔 오픈소스 웹사이트 통계 도구로, Google Analytics의 이상적인 대안입니다. 본 문서는 Vercel에서 Umami를 배포하는 방법과 Vercel Storage를 통해 Neon PostgreSQL 데이터베이스를 만드는 방법을 안내하여 제로 비용의 경량 웹사이트 트래픽 통계 시스템을 구축하는 방법을 설명합니다. 본 튜토리얼은 Hugo 정적 웹사이트 사용자를 위해 특별히 최적화되어, 생성된 Markdown 파일이 Hugo의 정적 웹페이지 생성에 적합하도록 보장합니다.&lt;/p>
+&lt;h2 id="서론">서론&lt;/h2>
+&lt;p>개인 블로그나 중소형 웹사이트의 경우 Google Analytics는 과도하게 복잡할 수 있으며, 일부 지역에서는 접근이 불편할 수 있습니다. Umami는 간결한 인터페이스와 핵심 지표를 제공하여 가벼운 트래픽 분석 요구에 매우 적합합니다. Vercel의 Serverless 배포와 Vercel Storage와 통합된 Neon 데이터베이스를 통해 우리는 서버 유지 관리 비용없이 높은 효율의 통계 시스템을 신속하게 구축할 수 있습니다.&lt;/p></description></item></channel></rss>

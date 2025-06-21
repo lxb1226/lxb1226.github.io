@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloudflare on Heyjude's Blog</title><link>https://heyjude.blog/ko/tags/cloudflare/</link><description>Recent content in Cloudflare on Heyjude's Blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Mon, 16 Jun 2025 20:29:00 +0800</lastBuildDate><atom:link href="https://heyjude.blog/ko/tags/cloudflare/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo를 사용하여 블로그를 구축하고 Cloudflare Pages에 배포하기</title><link>https://heyjude.blog/ko/posts/deploy-hugo-to-cloudflare/</link><pubDate>Mon, 16 Jun 2025 20:29:00 +0800</pubDate><guid>https://heyjude.blog/ko/posts/deploy-hugo-to-cloudflare/</guid><description>&lt;h1 id="hugo를-사용하여-블로그를-구축하고-cloudflare-pages에-배포하기">Hugo를 사용하여 블로그를 구축하고 Cloudflare Pages에 배포하기&lt;/h1>
+&lt;p>이 글에서는 &lt;a href="https://gohugo.io/">Hugo&lt;/a>를 사용하여 개인 블로그를 구축하고 이를 &lt;a href="https://pages.cloudflare.com/">Cloudflare Pages&lt;/a>에 배포하는 전체 과정을 단계별로 안내하겠습니다. Hugo는 빠르고 유연한 정적 웹사이트 생성기이며, Cloudflare Pages는 무료 정적 웹사이트 호스팅 서비스를 제공하여 글로벌 CDN 가속과 결합해 블로그를 빠르게 온라인으로 만들고 좋은 이용 경험을 제공합니다. 기술 초보자든 어느 정도 경험이 있는 개발자든 이 튜토리얼은 여러분이 자신만의 블로그를 빠르게 구축하는 데 도움을 줄 것입니다.&lt;/p>
+&lt;h2 id="왜-hugo와-cloudflare-pages를-선택해야-할까요">왜 Hugo와 Cloudflare Pages를 선택해야 할까요?&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Hugo&lt;/strong>: Go 언어로 작성되어 생성 속도가 매우 빠르며, 풍부한 테마와 Markdown 포맷을 지원하여 블로그와 문서 웹사이트에 적합합니다.&lt;/li>
+&lt;li>&lt;strong>Cloudflare Pages&lt;/strong>: GitHub와의 원활한 통합, 자동 배포, 무료 SSL 인증서, 그리고 글로벌 CDN 가속을 제공하여, 국내에서의 접근 속도가 GitHub Pages보다 우수합니다.&lt;/li>
+&lt;li>&lt;strong>비용&lt;/strong>: 두 가지를 결합하면 완전히 무료로 사용할 수 있어 개인 블로그나 소규모 프로젝트에 적합합니다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="사전-준비">사전 준비&lt;/h2>
+&lt;p>시작하기 전에 다음 도구와 계정을 준비해야 합니다:&lt;/p></description></item></channel></rss>
