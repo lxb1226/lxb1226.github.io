@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GitHub on Heyjude's Blog</title><link>https://heyjude.blog/zh-cn/tags/github/</link><description>Recent content in GitHub on Heyjude's Blog</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 21 Jun 2025 22:00:00 +0800</lastBuildDate><atom:link href="https://heyjude.blog/zh-cn/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>如何将 Hugo 博客同步到 GitHub Profile</title><link>https://heyjude.blog/zh-cn/posts/sync-hugo-blog-to-github-profile/</link><pubDate>Sat, 21 Jun 2025 22:00:00 +0800</pubDate><guid>https://heyjude.blog/zh-cn/posts/sync-hugo-blog-to-github-profile/</guid><description>&lt;h2 id="如何将-hugo-博客同步到-github-profile">如何将 Hugo 博客同步到 GitHub Profile&lt;/h2>
+&lt;p>当我们部署好我们的blog之后，我们会希望每次我们的blog更新之后，我们的github profile也能够自动更新，这样我们的github profile就能够展示我们的最新blog文章。我们可以利用 &lt;code>GitHub action&lt;/code> 来完成这件事。&lt;/p>
+&lt;h2 id="前提条件">前提条件&lt;/h2>
+&lt;p>在开始之前，请确保你已完成以下准备工作：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Hugo 博客&lt;/strong>：已搭建好 Hugo 博客，并托管在 GitHub 仓库（如 &lt;code>username/username.github.io&lt;/code> 或自定义仓库）。&lt;/li>
+&lt;li>&lt;strong>GitHub 仓库&lt;/strong>：拥有一个用于存储博客源文件的仓库（例如 &lt;code>username/blog&lt;/code>）和一个用于 GitHub Pages 的仓库（例如 &lt;code>username/username.github.io&lt;/code>），。&lt;/li>
+&lt;li>&lt;strong>GitHub Profile README&lt;/strong>：已在 GitHub 上启用 Profile README（创建一个与用户名同名的仓库，如 &lt;code>username/username&lt;/code>， 例如 &lt;a href="https://github.com/lxb1226/lxb1226">我的 GitHub Profile&lt;/a>）。&lt;/li>
+&lt;li>&lt;strong>基础 Git 知识&lt;/strong>：了解如何提交代码、配置 &lt;code>.gitignore&lt;/code> 和使用 GitHub Actions。&lt;/li>
+&lt;/ul>
+&lt;h2 id="什么是-blog-post-workflow">什么是 blog-post-workflow？&lt;/h2>
+&lt;p>&lt;code>blog-post-workflow&lt;/code> 是一个由 Gautam Krishnar 开发的 GitHub Action，专门用于将博客的最新文章同步到 GitHub Profile README 或其他指定位置。它支持多种博客框架（包括 Hugo），通过解析 RSS 提要（feed）获取最新文章，并自动更新目标文件。&lt;/p>
+&lt;h2 id="步骤-1设置-hugo-博客仓库">步骤 1：设置 Hugo 博客仓库&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>确保 Hugo 博客生成 RSS 提要&lt;/strong>：
+Hugo 默认会生成 RSS 提要（通常位于 &lt;code>public/index.xml&lt;/code>）。在你的 Hugo 配置文件（&lt;code>config.toml&lt;/code> 或 &lt;code>config.yaml&lt;/code>）中，确保启用了 RSS 输出：&lt;/p></description></item></channel></rss>

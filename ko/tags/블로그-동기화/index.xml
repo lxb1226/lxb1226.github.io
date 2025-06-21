@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>블로그 동기화 on Heyjude's Blog</title><link>https://heyjude.blog/ko/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%8F%99%EA%B8%B0%ED%99%94/</link><description>Recent content in 블로그 동기화 on Heyjude's Blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Sat, 21 Jun 2025 22:00:00 +0800</lastBuildDate><atom:link href="https://heyjude.blog/ko/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%8F%99%EA%B8%B0%ED%99%94/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 블로그를 GitHub 프로필에 동기화하는 방법</title><link>https://heyjude.blog/ko/posts/sync-hugo-blog-to-github-profile/</link><pubDate>Sat, 21 Jun 2025 22:00:00 +0800</pubDate><guid>https://heyjude.blog/ko/posts/sync-hugo-blog-to-github-profile/</guid><description>&lt;h2 id="hugo-블로그를-github-프로필에-동기화하는-방법">Hugo 블로그를 GitHub 프로필에 동기화하는 방법&lt;/h2>
+&lt;p>블로그를 배포한 후, 블로그가 업데이트될 때마다 GitHub 프로필도 자동으로 업데이트되기를 원합니다. 이렇게 하면 GitHub 프로필에서 최신 블로그 기사를 보여줄 수 있습니다. 이를 위해 &lt;code>GitHub action&lt;/code>을 활용할 수 있습니다.&lt;/p>
+&lt;h2 id="전제-조건">전제 조건&lt;/h2>
+&lt;p>시작하기 전에 다음 준비 작업을 완료했는지 확인하세요:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Hugo 블로그&lt;/strong>: Hugo 블로그가 설정되고 GitHub 저장소에 호스팅되어야 합니다 (예: &lt;code>username/username.github.io&lt;/code> 또는 사용자 정의 저장소).&lt;/li>
+&lt;li>&lt;strong>GitHub 저장소&lt;/strong>: 블로그 소스 파일을 저장할 저장소(예: &lt;code>username/blog&lt;/code>)와 GitHub Pages를 위한 저장소(예: &lt;code>username/username.github.io&lt;/code>)가 있어야 합니다.&lt;/li>
+&lt;li>&lt;strong>GitHub 프로필 README&lt;/strong>: GitHub에서 프로필 README를 활성화해야 합니다 (사용자 이름과 동일한 이름의 저장소를 생성, 예: &lt;code>username/username&lt;/code>, 예를 들어 &lt;a href="https://github.com/lxb1226/lxb1226">내 GitHub 프로필&lt;/a>).&lt;/li>
+&lt;li>&lt;strong>기본 Git 지식&lt;/strong>: 코드 제출, &lt;code>.gitignore&lt;/code> 구성 및 GitHub Actions 사용 방법을 이해해야 합니다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="blog-post-workflow란-무엇인가요">blog-post-workflow란 무엇인가요?&lt;/h2>
+&lt;p>&lt;code>blog-post-workflow&lt;/code>는 Gautam Krishnar가 개발한 GitHub Action으로, 블로그의 최신 기사를 GitHub 프로필 README나 다른 지정된 위치에 동기화하는 데 특화되어 있습니다. 다양한 블로그 프레임워크(포함된 Hugo)를 지원하며, RSS 피드를 분석하여 최신 기사를 가져와 목표 파일을 자동으로 업데이트합니다.&lt;/p></description></item></channel></rss>
