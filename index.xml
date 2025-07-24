@@ -352,13 +352,13 @@
  data-lightbox-enabled="false"
  data-gallery-type="auto">
  &lt;div class="image-container">
- 
  &lt;img
  src="https://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png"
  alt="install"
  
+ 
  loading="lazy"
- decoding="async" 
+ decoding="async"
  data-gallery-src="https://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png"
  data-gallery-alt="install"
  data-gallery-title="" />&lt;/div>
