@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog Estático on Heyjude's Blog</title><link>https://heyjude.blog/es/tags/blog-est%C3%A1tico/</link><description>Recent content in Blog Estático on Heyjude's Blog</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://heyjude.blog/es/tags/blog-est%C3%A1tico/index.xml" rel="self" type="application/rss+xml"/><item><title>Integrar Sistema de Comentarios Giscus en Blog de Hugo</title><link>https://heyjude.blog/es/posts/giscus-comments-hugo/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/es/posts/giscus-comments-hugo/</guid><description>&lt;p>Este es el tercer tutorial sobre la construcción de tu propio sistema de blog, enfocado en agregar un sistema de comentarios.&lt;/p>
+&lt;p>Durante el proceso de configuración del blog, un buen sistema de comentarios puede mejorar enormemente la interactividad. Hoy, presentaré cómo integrar &lt;a href="https://giscus.app/">Giscus&lt;/a>, un sistema de comentarios open source basado en GitHub Discussions, en un blog de Hugo.&lt;/p>
+&lt;h2 id="por-qué-elegir-giscus">¿Por Qué Elegir Giscus?&lt;/h2>
+&lt;ul>
+&lt;li>🚀 No requiere servidor, basado en GitHub Discussions&lt;/li>
+&lt;li>🔒 Seguro y confiable, los datos de comentarios se almacenan en GitHub&lt;/li>
+&lt;li>🧩 Soporta modo oscuro y temas adaptativos&lt;/li>
+&lt;li>💬 Soporta comentarios anónimos (opcional)&lt;/li>
+&lt;li>🌍 Soporte de interfaz multilingüe&lt;/li>
+&lt;/ul>
+&lt;h2 id="preparación">Preparación&lt;/h2>
+&lt;p>Antes de comenzar, necesitas:&lt;/p></description></item></channel></rss>

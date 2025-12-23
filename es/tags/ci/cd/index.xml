@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CI/CD on Heyjude's Blog</title><link>https://heyjude.blog/es/tags/ci/cd/</link><description>Recent content in CI/CD on Heyjude's Blog</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 18 May 2025 17:01:07 +0800</lastBuildDate><atom:link href="https://heyjude.blog/es/tags/ci/cd/index.xml" rel="self" type="application/rss+xml"/><item><title>Cómo Desplegar tu Blog en GitHub Pages en 10 Minutos</title><link>https://heyjude.blog/es/posts/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><guid>https://heyjude.blog/es/posts/how-to-depoly-blog-to-github/</guid><description>&lt;p>Una vez que hemos construido nuestro sitio web de blog localmente, el siguiente paso es distribuir el contenido del blog en línea para que otros puedan verlo.&lt;/p>
+&lt;p>Investigué los sitios web de hosting actuales y encontré las siguientes opciones:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>GitHub Pages&lt;/strong>: Un servicio gratuito de hosting de sitios estáticos proporcionado por GitHub, adecuado para integración con repositorios de código.&lt;/li>
+&lt;li>&lt;strong>Netlify&lt;/strong>: Admite construcción y despliegue automáticos, características ricas en el plan gratuito, con muy buen soporte para Hugo.&lt;/li>
+&lt;li>&lt;strong>Vercel&lt;/strong>: Desarrollado por el equipo de Next.js, despliegue rápido, adecuado para proyectos frontend.&lt;/li>
+&lt;li>&lt;strong>Cloudflare Pages&lt;/strong>: Servicio de hosting de sitios estáticos proporcionado por Cloudflare, viene con aceleración CDN y de seguridad.&lt;/li>
+&lt;li>&lt;strong>Firebase Hosting&lt;/strong>: Una plataforma de hosting frontend lanzada por Google, adecuada para usar con aplicaciones frontend.&lt;/li>
+&lt;li>&lt;strong>Amazon S3 + CloudFront&lt;/strong>: Una solución de alto rendimiento de hosting y distribución, adecuada para despliegues profesionales.&lt;/li>
+&lt;li>&lt;strong>GitLab Pages&lt;/strong>: Servicio de hosting de sitios estáticos proporcionado por GitLab, construye automáticamente a través de configuración CI.&lt;/li>
+&lt;li>&lt;strong>Render&lt;/strong>: Una plataforma de hosting full-stack simplificada, admite el despliegue automático de sitios de Hugo.&lt;/li>
+&lt;li>&lt;strong>Surge.sh&lt;/strong>: Una herramienta minimalista de hosting de sitios estáticos, despliegue de línea de comandos simple y rápido.&lt;/li>
+&lt;li>&lt;strong>DigitalOcean App Platform&lt;/strong>: Plataforma de servicio en la nube que admite el despliegue automático de sitios web estáticos y servicios backend.&lt;/li>
+&lt;/ul>
+&lt;p>Estas plataformas tienen sus propias características, y presentaré cómo desplegar en cada una en próximos artículos. En este artículo, presentaré cómo desplegar un sitio web de blog en GitHub Pages.&lt;/p></description></item></channel></rss>

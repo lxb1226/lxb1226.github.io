@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heyjude's Blog</title><link>https://heyjude.blog/pt/</link><description>Recent content on Heyjude's Blog</description><generator>Hugo</generator><language>pt</language><lastBuildDate>Sun, 22 Jun 2025 10:00:00 +0800</lastBuildDate><atom:link href="https://heyjude.blog/pt/index.xml" rel="self" type="application/rss+xml"/><item><title>Como Traduzir Automaticamente seu Blog Hugo Usando AI</title><link>https://heyjude.blog/pt/posts/how-to-translate-hugo-blog-with-ai/</link><pubDate>Sun, 22 Jun 2025 10:00:00 +0800</pubDate><guid>https://heyjude.blog/pt/posts/how-to-translate-hugo-blog-with-ai/</guid><description>&lt;h2 id="introdução">Introdução&lt;/h2>
+&lt;p>Uma vez que criamos nosso próprio blog, gostaríamos que ele suportasse múltiplos idiomas. Isso não apenas expande nosso público, mas também melhora o desempenho SEO do blog. No entanto, traduzir manualmente as postagens do blog é uma tarefa que consome muito tempo e é trabalhosa, exigindo tradutores profissionais. Mas com o desenvolvimento da AI, as coisas são diferentes agora; usando AI, você pode traduzir facilmente seu blog para qualquer idioma desejado. Para facilitar isso, criei uma ferramenta que utiliza AI para automatizar a tradução de suas postagens de blog, permitindo que você suporte facilmente múltiplos idiomas.&lt;/p></description></item><item><title>Como Integrar Microsoft Clarity em um Blog Hugo com Análise de Usuário e Mapas de Calor</title><link>https://heyjude.blog/pt/posts/hugo_clarity_integration/</link><pubDate>Sat, 21 Jun 2025 22:00:00 +0800</pubDate><guid>https://heyjude.blog/pt/posts/hugo_clarity_integration/</guid><description>&lt;hr>
+&lt;h2 id="introdução">Introdução&lt;/h2>
+&lt;p>O Microsoft Clarity é uma ferramenta gratuita de análise de sites que fornece mapas de calor do comportamento do usuário, gravações de sessão e dados detalhados de análise para ajudar webmasters a entender melhor o comportamento do usuário, otimizar o conteúdo do site e melhorar a experiência do usuário. Depois de configurar seu próprio site de blog, você pode querer rastrear o comportamento do usuário, e esta ferramenta pode ajudá-lo a analisar as ações do usuário. Para sites de blog estáticos construídos com Hugo, integrar o Clarity é simples e pode ser feito em apenas alguns passos.&lt;/p></description></item><item><title>Como Sincronizar seu Blog Hugo ao Perfil do GitHub com GitHub Actions Automaticamente</title><link>https://heyjude.blog/pt/posts/sync-hugo-blog-to-github-profile/</link><pubDate>Sat, 21 Jun 2025 22:00:00 +0800</pubDate><guid>https://heyjude.blog/pt/posts/sync-hugo-blog-to-github-profile/</guid><description>&lt;h2 id="como-sincronizar-seu-blog-hugo-ao-perfil-do-github">Como Sincronizar seu Blog Hugo ao Perfil do GitHub&lt;/h2>
+&lt;p>Depois de implantarmos nosso blog, queremos que nosso perfil do GitHub seja atualizado automaticamente sempre que houver uma nova publicação no blog, para que nosso perfil possa exibir nossos últimos artigos. Podemos achieving isso com &lt;code>GitHub Actions&lt;/code>.&lt;/p>
+&lt;h2 id="pré-requisitos">Pré-requisitos&lt;/h2>
+&lt;p>Antes de começar, certifique-se de ter completado os seguintes preparativos:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Blog Hugo&lt;/strong>: Um blog Hugo configurado e hospedado em um repositório do GitHub (como &lt;code>username/username.github.io&lt;/code> ou um repositório personalizado).&lt;/li>
+&lt;li>&lt;strong>Repositório do GitHub&lt;/strong>: Um repositório para armazenar os arquivos fonte do seu blog (por exemplo, &lt;code>username/blog&lt;/code>) e um repositório para GitHub Pages (por exemplo, &lt;code>username/username.github.io&lt;/code>).&lt;/li>
+&lt;li>&lt;strong>README do Perfil do GitHub&lt;/strong>: O Profile README está habilitado no GitHub (crie um repositório com o mesmo nome que seu nome de usuário, como &lt;code>username/username&lt;/code>, por exemplo, &lt;a href="https://github.com/lxb1226/lxb1226">Meu Perfil do GitHub&lt;/a>).&lt;/li>
+&lt;li>&lt;strong>Conhecimentos Básicos de Git&lt;/strong>: Entender como fazer commit de código, configurar &lt;code>.gitignore&lt;/code> e usar GitHub Actions.&lt;/li>
+&lt;/ul>
+&lt;h2 id="o-que-é-blog-post-workflow">O que é blog-post-workflow?&lt;/h2>
+&lt;p>&lt;code>blog-post-workflow&lt;/code> é uma GitHub Action desenvolvida por Gautam Krishnar, projetada para sincronizar as últimas publicações do blog ao GitHub Profile README ou outras localizações especificadas. Suporta múltiplos frameworks de blog (incluindo Hugo) e recupera as últimas publicações analisando o feed RSS, atualizando automaticamente o arquivo de destino.&lt;/p></description></item><item><title>Criar um Blog com Hugo e Implantar no Cloudflare Pages</title><link>https://heyjude.blog/pt/posts/deploy-hugo-to-cloudflare/</link><pubDate>Mon, 16 Jun 2025 20:29:00 +0800</pubDate><guid>https://heyjude.blog/pt/posts/deploy-hugo-to-cloudflare/</guid><description>&lt;h1 id="criar-um-blog-com-hugo-e-implantar-no-cloudflare-pages">Criar um Blog com Hugo e Implantar no Cloudflare Pages&lt;/h1>
+&lt;p>Neste artigo, vou guiá-lo passo a passo através do processo completo de construção de um blog pessoal usando &lt;a href="https://gohugo.io/">Hugo&lt;/a> e implantá-lo no &lt;a href="https://pages.cloudflare.com/">Cloudflare Pages&lt;/a>. O Hugo é um gerador de sites estáticos rápido e flexível, enquanto o Cloudflare Pages oferece serviços de hospedagem gratuita com aceleração CDN global, permitindo que seu blog entre no ar rapidamente e proporcion uma boa experiência de usuário. Seja você um iniciante técnico ou um desenvolvedor experiente, este tutorial ajudará você a configurar rapidamente seu próprio blog.&lt;/p></description></item><item><title>Implante o Umami Facilmente para Estatísticas de Tráfego do Site na Vercel</title><link>https://heyjude.blog/pt/posts/how-to-depoly-umami-with-vercel/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/pt/posts/how-to-depoly-umami-with-vercel/</guid><description>&lt;p>Umami é uma ferramenta de estatísticas de sites de código aberto, simples, rápida e focada na privacidade, tornando-a uma alternativa ideal ao Google Analytics. Este artigo irá guiá-lo sobre como implantar o Umami na Vercel e criar um banco de dados PostgreSQL Neon através do Vercel Storage, para construir um sistema de estatísticas de tráfego de site leve e sem custo. Este tutorial é especificamente otimizado para usuários de sites estáticos Hugo, garantindo que os arquivos Markdown gerados sejam compatíveis com a geração de sites estáticos do Hugo.&lt;/p></description></item><item><title>Integrar Sistema de Comentários Giscus no Blog Hugo</title><link>https://heyjude.blog/pt/posts/giscus-comments-hugo/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/pt/posts/giscus-comments-hugo/</guid><description>&lt;p>Este é o terceiro tutorial sobre a construção do seu próprio sistema de blog, focado em adicionar um sistema de comentários.&lt;/p>
+&lt;p>Durante o processo de configuração do blog, um bom sistema de comentários pode melhorar enormemente a interatividade. Hoje, apresentarei como integrar &lt;a href="https://giscus.app/">Giscus&lt;/a>, um sistema de comentários open source baseado em GitHub Discussions, em um blog Hugo.&lt;/p>
+&lt;h2 id="por-que-escolher-giscus">Por Que Escolher Giscus?&lt;/h2>
+&lt;ul>
+&lt;li>🚀 Não requer servidor, baseado em GitHub Discussions&lt;/li>
+&lt;li>🔒 Seguro e confiável, dados de comentários armazenados no GitHub&lt;/li>
+&lt;li>🧩 Suporta modo escuro e temas adaptativos&lt;/li>
+&lt;li>💬 Suporta comentários anônimos (opcional)&lt;/li>
+&lt;li>🌍 Suporte de interface multilíngue&lt;/li>
+&lt;/ul>
+&lt;h2 id="preparação">Preparação&lt;/h2>
+&lt;p>Antes de começar, você precisa:&lt;/p></description></item><item><title>Como Implantar seu Blog no GitHub Pages em 10 Minutos</title><link>https://heyjude.blog/pt/posts/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><guid>https://heyjude.blog/pt/posts/how-to-depoly-blog-to-github/</guid><description>&lt;p>Depois de construirmos nosso site de blog localmente, o próximo passo é distribuir o conteúdo do blog online para que outros possam vê-lo.&lt;/p>
+&lt;p>Pesquisei os sites de hospedagem atuais e encontrei as seguintes opções:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>GitHub Pages&lt;/strong>: Um serviço gratuito de hospedagem de sites estáticos fornecido pelo GitHub, adequado para integração com repositórios de código.&lt;/li>
+&lt;li>&lt;strong>Netlify&lt;/strong>: Suporta construção e implantação automáticas, recursos ricos no plano gratuito, com muito bom suporte para Hugo.&lt;/li>
+&lt;li>&lt;strong>Vercel&lt;/strong>: Desenvolvido pela equipe Next.js, implantação rápida, adequado para projetos frontend.&lt;/li>
+&lt;li>&lt;strong>Cloudflare Pages&lt;/strong>: Serviço de hospedagem de sites estáticos fornecido pela Cloudflare, vem com aceleração CDN e de segurança.&lt;/li>
+&lt;li>&lt;strong>Firebase Hosting&lt;/strong>: Uma plataforma de hospedagem frontend lançada pelo Google, adequada para uso com aplicativos frontend.&lt;/li>
+&lt;li>&lt;strong>Amazon S3 + CloudFront&lt;/strong>: Uma solução de alta performance de hospedagem e distribuição, adequada para implantações profissionais.&lt;/li>
+&lt;li>&lt;strong>GitLab Pages&lt;/strong>: Serviço de hospedagem de sites estáticos fornecido pelo GitLab, constrói automaticamente através da configuração CI.&lt;/li>
+&lt;li>&lt;strong>Render&lt;/strong>: Uma plataforma de hospedagem full-stack simplificada, suporta implantação automática de sites Hugo.&lt;/li>
+&lt;li>&lt;strong>Surge.sh&lt;/strong>: Uma ferramenta minimalista de hospedagem de sites estáticos, implantação de linha de comando simples e rápida.&lt;/li>
+&lt;li>&lt;strong>DigitalOcean App Platform&lt;/strong>: Plataforma de serviço em nuvem que suporta implantação automática de sites estáticos e serviços backend.&lt;/li>
+&lt;/ul>
+&lt;p>Essas plataformas têm suas próprias características, e apresentarei como implantar em cada uma em próximos artigos. Neste artigo, apresentarei como implantar um site de blog no GitHub Pages.&lt;/p></description></item><item><title>Como Preencher Automaticamente Códigos de Verificação SMS no Mac</title><link>https://heyjude.blog/pt/posts/how-to-use-mess-auto/</link><pubDate>Wed, 07 May 2025 22:36:09 +0800</pubDate><guid>https://heyjude.blog/pt/posts/how-to-use-mess-auto/</guid><description>&lt;h1 id="motivo">Motivo&lt;/h1>
+&lt;p>Sabemos que o iOS suporta o preenchimento automático de códigos de verificação SMS, e o Safari no Mac também suporta. No entanto, navegadores que não são Safari não suportam este recurso. Porém, em plataformas nacionais, códigos de verificação são algo de que não podemos escapar, por isso fiz algumas pesquisas e encontrei algumas soluções atuais.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://apps.apple.com/cn/app/id6472872202">AutoCode&lt;/a>: Este é um aplicativo gratuito disponível na App Store, suportando encaminhamento no iOS e Android.&lt;/li>
+&lt;li>&lt;a href="https://github.com/LeeeSe/MessAuto">MessAuto&lt;/a>: MessAuto é um aplicativo para macOS que extrai automaticamente códigos de verificação de SMS e e-mail, desenvolvido em Rust e adequado para qualquer aplicativo.&lt;/li>
+&lt;/ul>
+&lt;p>Como o MessAuto é open-source, escolhi este software.&lt;/p></description></item><item><title>Como Criar um Blog em 10 Minutos</title><link>https://heyjude.blog/pt/posts/how-to-create-blog-with-hugo/</link><pubDate>Mon, 05 May 2025 20:28:24 +0800</pubDate><guid>https://heyjude.blog/pt/posts/how-to-create-blog-with-hugo/</guid><description>&lt;h2 id="o-que-é-hugo">O que é Hugo&lt;/h2>
+&lt;p>O Hugo é um dos geradores de sites estáticos de código aberto mais populares. Os usuários podem rapidamente construir seus próprios sites usando o Hugo.&lt;/p>
+&lt;h2 id="passos-de-configuração">Passos de Configuração&lt;/h2>
+&lt;h3 id="instalar-o-hugo">Instalar o Hugo&lt;/h3>
+&lt;p>No Mac, você pode usar o seguinte comando para instalar o Hugo:&lt;/p>
+&lt;div
+ class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+ 
+ &lt;div
+ class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;div class="text-muted-foreground flex-shrink-0">
+ 
+ &lt;svg class="h-4 w-4"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+&lt;/svg>
+ &lt;/div>
+ &lt;span class="text-muted-foreground text-sm font-medium">
+ BASH
+ &lt;/span>
+ &lt;/div>
+
+ 
+ &lt;div class="flex items-center gap-2">
+ &lt;button
+ class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-0"
+ data-default-state="expanded"
+ data-collapsed="false"
+ data-auto-collapse-lines="30"
+ data-auto-collapse-height="400"
+ data-collapsed-height="120"
+ title="Collapse"
+ aria-label="Collapse">
+ &lt;span class="collapse-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/>&lt;/svg>
+ &lt;/span>
+ &lt;span class="collapse-text hidden sm:inline"
+ >Collapse&lt;/span
+ >
+ &lt;/button>
+ &lt;button
+ class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+ data-code-id="code-0"
+ title="Copy"
+ aria-label="Copy">
+ &lt;span class="copy-icon">
+ 
+ &lt;svg class="h-3 w-3"
+ fill="none"
+ stroke="currentColor"
+ viewBox="0 0 24 24">&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+&lt;/svg>
+ &lt;/span>
+ &lt;span class="copy-text hidden sm:inline"
+ >Copy&lt;/span
+ >
+ &lt;/button>
+ &lt;/div>
+ &lt;/div>
+
+ 
+ &lt;div class="code-block-content relative" id="code-0">
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">brew install hugo&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ 
+ &lt;div
+ class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+ &lt;div
+ class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+ Click to expand and view more
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;/div>
+
+
+&lt;script>
+(function() {
+ const codeId = 'code-0';
+ const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+ const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+ const codeContainer = document.getElementById(codeId);
+
+ if (!codeContainer) return;
+
+ 
+ if (copyBtn) {
+ const copyIcon = copyBtn.querySelector('.copy-icon');
+ const copyText = copyBtn.querySelector('.copy-text');
+
+ copyBtn.addEventListener('click', async function() {
+ try {
+ 
+ let codeText = '';
+
+ 
+ const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+ if (codeTableCell) {
+ codeText = codeTableCell.textContent || codeTableCell.innerText;
+ } else {
+ 
+ const codeElement = codeContainer.querySelector('code');
+ if (codeElement) {
+ 
+ const hasInlineLineNumbers = codeElement.querySelector('.ln');
+ if (hasInlineLineNumbers) {
+ 
+ const codeLines = codeElement.querySelectorAll('.cl');
+ if (codeLines.length > 0) {
+ codeText = Array.from(codeLines)
+ .map(line => {
+ const text = line.textContent || line.innerText;
+ 
+ return text.replace(/\n+$/, '');
+ })
+ .join('\n')
+ .replace(/\n+$/, ''); 
+ } else {
+ 
+ const allText = codeElement.textContent || codeElement.innerText;
+ codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+ }
+ } else {
+ 
+ codeText = codeElement.textContent || codeElement.innerText;
+ }
+ } else {
+ 
+ codeText = codeContainer.textContent || codeContainer.innerText;
+ }
+ }
+
+ 
+ codeText = codeText.trim();
+
+ 
+ await navigator.clipboard.writeText(codeText);
+
+ 
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = 'Copied';
+ }
+ copyBtn.classList.add('text-green-600');
+
+ 
+ setTimeout(() => {
+ copyIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (copyText) {
+ copyText.textContent = 'Copy';
+ }
+ copyBtn.classList.remove('text-green-600');
+ }, 2000);
+
+ } catch (err) {
+ console.error('复制失败:', err);
+
+ 
+ const range = document.createRange();
+ const codeElement = codeContainer.querySelector('code') || codeContainer;
+ range.selectNodeContents(codeElement);
+ const selection = window.getSelection();
+ selection.removeAllRanges();
+ selection.addRange(range);
+
+ 
+ if (copyText) {
+ copyText.textContent = 'Selected';
+ }
+
+ setTimeout(() => {
+ if (copyText) {
+ copyText.textContent = 'Copy';
+ }
+ selection.removeAllRanges();
+ }, 2000);
+ }
+ });
+ }
+
+ 
+ if (collapseBtn) {
+ const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+ const collapseText = collapseBtn.querySelector('.collapse-text');
+ const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+ 
+ let codeElement = codeContainer.querySelector('pre.chroma');
+ if (!codeElement) {
+ codeElement = codeContainer.querySelector('pre');
+ }
+
+ const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+ const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+ const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+ const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+ const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+ let isCollapsed = false;
+
+ 
+ function initCollapse() {
+ 
+ const shouldCollapse = isCollapsedAttr ||
+ defaultState === 'collapsed' ||
+ shouldAutoCollapse();
+
+ if (shouldCollapse) {
+ setCollapsed(true, false); 
+ }
+ }
+
+ function shouldAutoCollapse() {
+ 
+ if (codeElement) {
+ const lines = codeElement.querySelectorAll('.line, .cl');
+ const height = codeElement.offsetHeight;
+ return lines.length > autoCollapseLines || height > autoCollapseHeight;
+ }
+
+ 
+ const containerHeight = codeContainer.offsetHeight;
+ if (containerHeight > autoCollapseHeight) {
+ return true;
+ }
+
+ 
+ const textContent = codeContainer.textContent || codeContainer.innerText || '';
+ const estimatedLines = textContent.split('\n').length;
+ return estimatedLines > autoCollapseLines;
+ }
+
+ function setCollapsed(collapsed, animate = true) {
+ if (!collapseOverlay) return;
+
+ isCollapsed = collapsed;
+
+ if (collapsed) {
+ 
+ codeContainer.style.maxHeight = collapsedHeight + 'px';
+ codeContainer.style.overflow = 'hidden';
+ collapseOverlay.style.opacity = '1';
+ collapseOverlay.style.pointerEvents = 'auto';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = 'Expand';
+ }
+ collapseBtn.title = 'Expand';
+
+ } else {
+ 
+ codeContainer.style.maxHeight = '';
+ codeContainer.style.overflow = '';
+ collapseOverlay.style.opacity = '0';
+ collapseOverlay.style.pointerEvents = 'none';
+
+ 
+ collapseIcon.innerHTML = `\n \u003csvg class=\u0022h-3 w-3\u0022\n fill=\u0022none\u0022\n stroke=\u0022currentColor\u0022\n viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+ if (collapseText) {
+ collapseText.textContent = 'Collapse';
+ }
+ collapseBtn.title = 'Collapse';
+ }
+
+ 
+ if (animate) {
+ codeContainer.style.transition = 'max-height 0.3s ease-out';
+ setTimeout(() => {
+ codeContainer.style.transition = '';
+ }, 300);
+ }
+ }
+
+ function toggleCollapse() {
+ setCollapsed(!isCollapsed, true);
+ }
+
+ 
+ collapseBtn.addEventListener('click', toggleCollapse);
+
+ 
+ if (collapseOverlay) {
+ collapseOverlay.addEventListener('click', () => {
+ if (isCollapsed) {
+ setCollapsed(false, true);
+ }
+ });
+ }
+
+ 
+ initCollapse();
+ }
+})();
+&lt;/script>
+&lt;p>
+&lt;figure class="image-figure not-prose my-8" 
+ data-lightbox-enabled="false"
+ data-gallery-type="auto">
+ &lt;div class="image-container">
+ &lt;img
+ src="https://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png"
+ alt="install"
+ 
+ 
+ loading="lazy"
+ decoding="async"
+ data-gallery-src="https://img.music-poster.art/2025/05/c9d27037a7d215ff8eaa14383cba62b6.png"
+ data-gallery-alt="install"
+ data-gallery-title="" />&lt;/div>
+
+ &lt;/figure>&lt;/p></description></item><item><title>Contato</title><link>https://heyjude.blog/pt/contact/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://heyjude.blog/pt/contact/</guid><description>&lt;h2 id="informações-de-contato">Informações de Contato&lt;/h2>
+&lt;p>Fico feliz que você queira entrar em contato! Aqui estão várias formas de me alcançar:&lt;/p>
+&lt;h3 id="redes-sociais">Redes Sociais&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>GitHub: &lt;a href="https://github.com/lxb1226">lxb1226&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>Você pode encontrar meus projetos open source e contribuições aqui&lt;/li>
+&lt;li>Sinta-se à vontade para seguir e interagir&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Twitter: &lt;a href="https://twitter.com/heyjude55555">@heyjude55555&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>Compartilho insights técnicos e reflexões do dia a dia&lt;/li>
+&lt;li>Bem-vindo para nos seguirmos e conectarmos&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="e-mail">E-mail&lt;/h3>
+&lt;ul>
+&lt;li>Email: &lt;a href="mailto:heyjude1587@gmail.com">heyjude1587@gmail.com&lt;/a>
+&lt;ul>
+&lt;li>Esta é a forma mais direta de entrar em contato comigo&lt;/li>
+&lt;li>Verifico e respondo e-mails regularmente&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="interação-no-blog">Interação no Blog&lt;/h3>
+&lt;ul>
+&lt;li>Sinta-se à vontade para deixar comentários nas postagens do blog&lt;/li>
+&lt;li>Inscreva-se no RSS para receber as últimas atualizações&lt;/li>
+&lt;/ul>
+&lt;h3 id="colaboração">Colaboração&lt;/h3>
+&lt;p>Acolho contato para:&lt;/p></description></item><item><title>Política de Privacidade</title><link>https://heyjude.blog/pt/privacy/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://heyjude.blog/pt/privacy/</guid><description>&lt;h2 id="política-de-privacidade">Política de Privacidade&lt;/h2>
+&lt;p>Valorizamos sua privacidade. Esta política de privacidade explica como coletamos, utilizamos e protegemos seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD), o Regulamento Geral de Proteção de Dados (GDPR) e a legislação aplicável em matéria de proteção de dados.&lt;/p>
+&lt;h3 id="coleta-de-informações">Coleta de Informações&lt;/h3>
+&lt;p>Ao visitar nosso blog, podemos coletar as seguintes informações:&lt;/p>
+&lt;ul>
+&lt;li>Registros de acesso (endereço IP, tipo de navegador, horário de acesso, etc.)&lt;/li>
+&lt;li>Nome e endereço de e-mail caso opte por deixar um comentário&lt;/li>
+&lt;/ul>
+&lt;h3 id="uso-das-informações">Uso das Informações&lt;/h3>
+&lt;p>As informações que coletamos são utilizadas para:&lt;/p></description></item><item><title>Sobre mim</title><link>https://heyjude.blog/pt/about/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://heyjude.blog/pt/about/</guid><description>&lt;h2 id="sobre-mim">Sobre mim&lt;/h2>
+&lt;p>Olá! Sou Heyjude, um engenheiro de software apaixonado por tecnologia e inovação.&lt;/p>
+&lt;h3 id="propósito-do-blog">Propósito do Blog&lt;/h3>
+&lt;p>Criei este blog para:&lt;/p>
+&lt;ul>
+&lt;li>Compartilhar insights técnicos e experiências&lt;/li>
+&lt;li>Documentar minha jornada de aprendizado&lt;/li>
+&lt;li>Conectar pessoas com interesses semelhantes&lt;/li>
+&lt;li>Discutir tendências tecnológicas&lt;/li>
+&lt;/ul>
+&lt;h3 id="interesses">Interesses&lt;/h3>
+&lt;p>Além de programação, eu gosto de:&lt;/p>
+&lt;ul>
+&lt;li>Ler livros técnicos&lt;/li>
+&lt;li>Contribuir com projetos open source&lt;/li>
+&lt;li>Explorar novas tecnologias&lt;/li>
+&lt;li>Compartilhar experiências técnicas&lt;/li>
+&lt;/ul>
+&lt;h3 id="informações-de-contato">Informações de Contato&lt;/h3>
+&lt;p>Sinta-se à vontade para me contatar através de:&lt;/p></description></item></channel></rss>

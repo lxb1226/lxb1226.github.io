@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github Pages on Heyjude's Blog</title><link>https://heyjude.blog/pt/tags/github-pages/</link><description>Recent content in Github Pages on Heyjude's Blog</description><generator>Hugo</generator><language>pt</language><lastBuildDate>Sun, 18 May 2025 17:01:07 +0800</lastBuildDate><atom:link href="https://heyjude.blog/pt/tags/github-pages/index.xml" rel="self" type="application/rss+xml"/><item><title>Como Implantar seu Blog no GitHub Pages em 10 Minutos</title><link>https://heyjude.blog/pt/posts/how-to-depoly-blog-to-github/</link><pubDate>Sun, 18 May 2025 17:01:07 +0800</pubDate><guid>https://heyjude.blog/pt/posts/how-to-depoly-blog-to-github/</guid><description>&lt;p>Depois de construirmos nosso site de blog localmente, o próximo passo é distribuir o conteúdo do blog online para que outros possam vê-lo.&lt;/p>
+&lt;p>Pesquisei os sites de hospedagem atuais e encontrei as seguintes opções:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>GitHub Pages&lt;/strong>: Um serviço gratuito de hospedagem de sites estáticos fornecido pelo GitHub, adequado para integração com repositórios de código.&lt;/li>
+&lt;li>&lt;strong>Netlify&lt;/strong>: Suporta construção e implantação automáticas, recursos ricos no plano gratuito, com muito bom suporte para Hugo.&lt;/li>
+&lt;li>&lt;strong>Vercel&lt;/strong>: Desenvolvido pela equipe Next.js, implantação rápida, adequado para projetos frontend.&lt;/li>
+&lt;li>&lt;strong>Cloudflare Pages&lt;/strong>: Serviço de hospedagem de sites estáticos fornecido pela Cloudflare, vem com aceleração CDN e de segurança.&lt;/li>
+&lt;li>&lt;strong>Firebase Hosting&lt;/strong>: Uma plataforma de hospedagem frontend lançada pelo Google, adequada para uso com aplicativos frontend.&lt;/li>
+&lt;li>&lt;strong>Amazon S3 + CloudFront&lt;/strong>: Uma solução de alta performance de hospedagem e distribuição, adequada para implantações profissionais.&lt;/li>
+&lt;li>&lt;strong>GitLab Pages&lt;/strong>: Serviço de hospedagem de sites estáticos fornecido pelo GitLab, constrói automaticamente através da configuração CI.&lt;/li>
+&lt;li>&lt;strong>Render&lt;/strong>: Uma plataforma de hospedagem full-stack simplificada, suporta implantação automática de sites Hugo.&lt;/li>
+&lt;li>&lt;strong>Surge.sh&lt;/strong>: Uma ferramenta minimalista de hospedagem de sites estáticos, implantação de linha de comando simples e rápida.&lt;/li>
+&lt;li>&lt;strong>DigitalOcean App Platform&lt;/strong>: Plataforma de serviço em nuvem que suporta implantação automática de sites estáticos e serviços backend.&lt;/li>
+&lt;/ul>
+&lt;p>Essas plataformas têm suas próprias características, e apresentarei como implantar em cada uma em próximos artigos. Neste artigo, apresentarei como implantar um site de blog no GitHub Pages.&lt;/p></description></item></channel></rss>
