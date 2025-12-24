@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Heyjude's Blog</title><link>https://heyjude.blog/ja/posts/</link><description>Recent content in Posts on Heyjude's Blog</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sun, 22 Jun 2025 10:00:00 +0800</lastBuildDate><atom:link href="https://heyjude.blog/ja/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>AIを使ってHugoブログを自動翻訳する方法</title><link>https://heyjude.blog/ja/posts/how-to-translate-hugo-blog-with-ai/</link><pubDate>Sun, 22 Jun 2025 10:00:00 +0800</pubDate><guid>https://heyjude.blog/ja/posts/how-to-translate-hugo-blog-with-ai/</guid><description>&lt;h2 id="前書き">前書き&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Heyjude's Blog</title><link>https://heyjude.blog/ja/posts/</link><description>Recent content in Posts on Heyjude's Blog</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://heyjude.blog/ja/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>FreeConvert.cc - 完全無料のオンラインファイル変換ツール</title><link>https://heyjude.blog/ja/posts/introducing-freeconvert-free-online-file-converter/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>https://heyjude.blog/ja/posts/introducing-freeconvert-free-online-file-converter/</guid><description>&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>こんな経験はありませんか。iPhoneで撮った写真を友人に送ろうとしたら、「HEICファイルが開けない」と言われた。PDFを編集したいけど、適切なソフトウェアがない。動画から音声だけを取り出したいが、重いデスクトップアプリをインストールしたくない。&lt;/p>
+&lt;p>ファイル形式の変換は、デジタル生活における日常的な悩みの一つです。従来の解決策には、いくつかの問題点があります。&lt;/p>
+&lt;ul>
+&lt;li>デスクトップソフトウェアは、インストールとアップデートが必要&lt;/li>
+&lt;li>オンライン変換サービスは、ファイルを外部サーバーにアップロード(プライバシーの懸念)&lt;/li>
+&lt;li>有料ツールは、基本機能にも課金が必要&lt;/li>
+&lt;li>多くのプラットフォームには、ファイルサイズ制限や透かしが入る&lt;/li>
+&lt;/ul>
+&lt;p>もっと良い方法があるとしたら。&lt;strong>FreeConvert.cc&lt;/strong>は、これらの問題をすべて解決しつつ、データを完全にプライベートに保つ無料のオンラインファイル変換プラットフォームです。&lt;/p></description></item><item><title>AIを使ってHugoブログを自動翻訳する方法</title><link>https://heyjude.blog/ja/posts/how-to-translate-hugo-blog-with-ai/</link><pubDate>Sun, 22 Jun 2025 10:00:00 +0800</pubDate><guid>https://heyjude.blog/ja/posts/how-to-translate-hugo-blog-with-ai/</guid><description>&lt;h2 id="前書き">前書き&lt;/h2>
 &lt;p>自分のブログを作成した際には、多言語をサポートしたいと思います。これは、読者を広げるだけでなく、ブログのSEOパフォーマンスを向上させることにも繋がります。しかし、ブログ記事の手動翻訳は時間と労力がかかり、専門の翻訳者が必要です。しかし、AIの進化により、今ではAIを使って簡単にブログをお好きな言語に翻訳できるようになりました。そのために、AIを活用してブログ記事を自動的に翻訳するツールを作成しました。これを使用すれば、多言語を簡単にサポートできます。&lt;/p>
 &lt;p>このツールは、&lt;a href="https://github.com/lxb1226/hugo-translator">hugo-translator&lt;/a> から入手できます。&lt;/p>
 &lt;h2 id="準備事項">準備事項&lt;/h2>
